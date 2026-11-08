@@ -1,0 +1,86 @@
+{
+  "app": {
+    "tabs": {
+      "themes": { "label": "Themen", "title": "Globale Themen" },
+      "wallpapers": { "label": "Hintergründe", "title": "Hintergrundbilder" },
+      "icons": { "label": "Symbole", "title": "Symbolthemen" },
+      "cursors": { "label": "Zeiger", "title": "Zeigerthemen" },
+      "gtk": { "label": "GTK", "title": "GTK-Themen" },
+      "panel": { "label": "Leiste", "title": "Anordnung der Leiste" },
+      "splash": { "label": "Start", "title": "Startbildschirm" },
+      "login": { "label": "Anmeldung", "title": "Plasma Login Manager" }
+    }
+  },
+  "sidebar": {
+    "interfaceLanguage": "Sprache dieses Fensters",
+    "switchToLight": "Zum hellen Thema wechseln",
+    "switchToDark": "Zum dunklen Thema wechseln",
+    "aboutTooltip": "Über Soplos Look Manager (F1)"
+  },
+  "common": {
+    "close": "Schließen",
+    "cancel": "Abbrechen",
+    "ok": "OK",
+    "error": "Fehler"
+  },
+  "about": {
+    "version": "Version {version}",
+    "tagline": "Themen und Anordnung von Soplos Linux Plasma",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Lizenziert unter der GNU General Public License v3.0 oder später"
+  },
+  "empty": {
+    "message": "Diese Seite ist noch nicht geschrieben."
+  },
+  "looks": {
+    "apply": "Anwenden",
+    "active": "In Verwendung",
+    "status": "{n} verfügbar",
+    "none": "Nichts gefunden",
+    "inUse": "In Verwendung: {name}",
+    "errors": {
+      "read": "Die Liste konnte nicht gelesen werden.",
+      "apply": "Es konnte nicht angewendet werden. Läuft Plasma?"
+    }
+  },
+  "login": {
+    "numlock": "Num-Taste bei der Anmeldung aktiviert",
+    "notInstalled": "Plasma Login Manager ist auf diesem Computer nicht installiert.",
+    "note": "Das Bild wird für den Anmeldebildschirm kopiert und bleibt sichtbar, auch wenn das Original verschoben wird. Es wird das Administratorpasswort verlangt.",
+    "errors": {
+      "apply": "Der Anmeldebildschirm konnte nicht geändert werden."
+    }
+  },
+  "panel": {
+    "location": {
+      "title": "Position",
+      "top": "Oben",
+      "bottom": "Unten",
+      "left": "Links",
+      "right": "Rechts"
+    },
+    "height": "Höhe",
+    "floating": "Schwebende Leiste",
+    "hiding": {
+      "title": "Leiste ausblenden",
+      "none": "Nie",
+      "autohide": "Automatisch",
+      "dodgewindows": "Wenn ein Fenster sie verdeckt",
+      "windowsgobelow": "Wenn ein Fenster darunter liegt"
+    },
+    "apply": "Anwenden",
+    "note": "Die Änderungen betreffen die oben gewählte Leiste.",
+    "name": "Leiste {n}",
+    "add": "Leiste hinzufügen",
+    "remove": "Leiste entfernen",
+    "lastOne": "Die letzte Leiste kann nicht entfernt werden",
+    "removeTitle": "Leiste entfernen",
+    "removeQuestion": "Die Leiste wird mit allem, was sie enthält, entfernt. Möchtest du sie entfernen?",
+    "errors": {
+      "read": "Die Leisten konnten nicht gelesen werden. Läuft Plasma?",
+      "apply": "Die Leiste konnte nicht geändert werden.",
+      "add": "Die Leiste konnte nicht hinzugefügt werden.",
+      "remove": "Die Leiste konnte nicht entfernt werden."
+    }
+  }
+}

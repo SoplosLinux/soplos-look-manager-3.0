@@ -1,0 +1,86 @@
+{
+  "app": {
+    "tabs": {
+      "themes": { "label": "Temi", "title": "Temi globali" },
+      "wallpapers": { "label": "Sfondi", "title": "Sfondi del desktop" },
+      "icons": { "label": "Icone", "title": "Temi di icone" },
+      "cursors": { "label": "Cursori", "title": "Temi di cursori" },
+      "gtk": { "label": "GTK", "title": "Temi GTK" },
+      "panel": { "label": "Pannello", "title": "Disposizione del pannello" },
+      "splash": { "label": "Avvio", "title": "Schermata di avvio" },
+      "login": { "label": "Accesso", "title": "Plasma Login Manager" }
+    }
+  },
+  "sidebar": {
+    "interfaceLanguage": "Lingua di questa finestra",
+    "switchToLight": "Passa al tema chiaro",
+    "switchToDark": "Passa al tema scuro",
+    "aboutTooltip": "Informazioni su Soplos Look Manager (F1)"
+  },
+  "common": {
+    "close": "Chiudi",
+    "cancel": "Annulla",
+    "ok": "OK",
+    "error": "Errore"
+  },
+  "about": {
+    "version": "Versione {version}",
+    "tagline": "Temi e disposizione di Soplos Linux Plasma",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Rilasciato con licenza GNU General Public License v3.0 o successiva"
+  },
+  "empty": {
+    "message": "Questa pagina non è ancora scritta."
+  },
+  "looks": {
+    "apply": "Applica",
+    "active": "In uso",
+    "status": "{n} disponibili",
+    "none": "Non è stato trovato nulla",
+    "inUse": "In uso: {name}",
+    "errors": {
+      "read": "Non è stato possibile leggere l'elenco.",
+      "apply": "Non è stato possibile applicarlo. Plasma è in esecuzione?"
+    }
+  },
+  "login": {
+    "numlock": "Bloc Num attivo all'accesso",
+    "notInstalled": "Plasma Login Manager non è installato su questo computer.",
+    "note": "L'immagine viene copiata per la schermata di accesso, quindi si vede anche se l'originale viene spostato. Viene chiesta la password di amministratore.",
+    "errors": {
+      "apply": "Non è stato possibile modificare la schermata di accesso."
+    }
+  },
+  "panel": {
+    "location": {
+      "title": "Posizione",
+      "top": "In alto",
+      "bottom": "In basso",
+      "left": "A sinistra",
+      "right": "A destra"
+    },
+    "height": "Altezza",
+    "floating": "Pannello fluttuante",
+    "hiding": {
+      "title": "Nascondi il pannello",
+      "none": "Mai",
+      "autohide": "Automaticamente",
+      "dodgewindows": "Quando una finestra lo copre",
+      "windowsgobelow": "Quando una finestra passa sotto"
+    },
+    "apply": "Applica",
+    "note": "Le modifiche riguardano il pannello scelto qui sopra.",
+    "name": "Pannello {n}",
+    "add": "Aggiungi pannello",
+    "remove": "Rimuovi pannello",
+    "lastOne": "L'ultimo pannello non può essere rimosso",
+    "removeTitle": "Rimuovi il pannello",
+    "removeQuestion": "Il pannello viene rimosso con tutto ciò che contiene. Vuoi rimuoverlo?",
+    "errors": {
+      "read": "Non è stato possibile leggere i pannelli. Plasma è in esecuzione?",
+      "apply": "Non è stato possibile modificare il pannello.",
+      "add": "Non è stato possibile aggiungere il pannello.",
+      "remove": "Non è stato possibile rimuovere il pannello."
+    }
+  }
+}

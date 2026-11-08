@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "soplos-look-manager",
+  "version": "3.0.0-alpha",
+  "identifier": "org.soplos.lookmanager",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1433",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Soplos Look Manager",
+        "width": 1000,
+        "height": 700,
+        "minWidth": 860,
+        "minHeight": 560,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "deb"
+    ],
+    "publisher": "Sergi Perich",
+    "homepage": "https://soplos.org",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "GPL-3.0-or-later",
+    "licenseFile": "../LICENSE",
+    "category": "Utility",
+    "shortDescription": "Themes and layout manager for Soplos Linux Plasma",
+    "longDescription": "Soplos Look Manager changes how Soplos Linux Tyson looks: global themes, wallpapers, icons, cursors, the panel layout, the start-up screen and the Plasma Login Manager.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png"
+    ],
+    "linux": {
+      "deb": {
+        "section": "utils",
+        "priority": "optional",
+        "depends": [
+          "pkexec | policykit-1"
+        ],
+        "recommends": [
+          "plasma-desktop"
+        ],
+        "changelog": "../CHANGELOG.md",
+        "desktopTemplate": "resources/debian/soplos-look-manager.desktop.hbs",
+        "files": {
+          "/usr/share/polkit-1/actions/org.soplos.lookmanager.policy": "resources/polkit/org.soplos.lookmanager.policy",
+          "/usr/share/metainfo/org.soplos.lookmanager.metainfo.xml": "resources/appstream/org.soplos.lookmanager.metainfo.xml",
+          "/usr/share/doc/soplos-look-manager/copyright": "resources/debian/copyright"
+        }
+      }
+    }
+  }
+}

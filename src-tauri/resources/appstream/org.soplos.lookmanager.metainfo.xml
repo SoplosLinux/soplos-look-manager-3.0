@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.soplos.lookmanager</id>
+  <pkgname>soplos-look-manager</pkgname>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <project_group>org.soplos</project_group>
+
+  <name>Soplos Look Manager</name>
+
+  <summary>Themes, wallpapers, icons, panels and login screen of Plasma</summary>
+  <summary xml:lang="es">Temas, fondos, iconos, paneles y pantalla de inicio de sesión de Plasma</summary>
+  <summary xml:lang="fr">Thèmes, fonds d'écran, icônes, panneaux et écran de connexion de Plasma</summary>
+  <summary xml:lang="pt">Temas, fundos, ícones, painéis e ecrã de início de sessão do Plasma</summary>
+  <summary xml:lang="de">Themen, Hintergründe, Symbole, Leisten und Anmeldebildschirm von Plasma</summary>
+  <summary xml:lang="it">Temi, sfondi, icone, pannelli e schermata di accesso di Plasma</summary>
+  <summary xml:lang="ru">Темы, обои, значки, панели и экран входа Plasma</summary>
+  <summary xml:lang="ro">Teme, fundaluri, pictograme, panouri și ecranul de autentificare ale Plasma</summary>
+
+  <description>
+    <p>Soplos Look Manager changes how Soplos Linux Tyson looks, from one window: the global theme, the wallpaper, the icons, the cursors, the GTK theme, the panels, the start-up screen and the login screen.</p>
+    <p xml:lang="es">Soplos Look Manager cambia el aspecto de Soplos Linux Tyson desde una sola ventana: el tema global, el fondo, los iconos, los cursores, el tema GTK, los paneles, la pantalla de arranque y la de inicio de sesión.</p>
+    <p xml:lang="fr">Soplos Look Manager change l'apparence de Soplos Linux Tyson depuis une seule fenêtre : le thème global, le fond d'écran, les icônes, les curseurs, le thème GTK, les panneaux, l'écran de démarrage et l'écran de connexion.</p>
+    <p xml:lang="de">Soplos Look Manager ändert das Aussehen von Soplos Linux Tyson in einem einzigen Fenster: das globale Thema, den Hintergrund, die Symbole, die Zeiger, das GTK-Thema, die Leisten, den Startbildschirm und den Anmeldebildschirm.</p>
+    <p xml:lang="pt">O Soplos Look Manager altera o aspeto do Soplos Linux Tyson numa só janela: o tema global, o fundo, os ícones, os cursores, o tema GTK, os painéis, o ecrã de arranque e o de início de sessão.</p>
+    <p xml:lang="it">Soplos Look Manager cambia l'aspetto di Soplos Linux Tyson da un'unica finestra: il tema globale, lo sfondo, le icone, i cursori, il tema GTK, i pannelli, la schermata di avvio e quella di accesso.</p>
+    <p xml:lang="ro">Soplos Look Manager schimbă aspectul Soplos Linux Tyson dintr-o singură fereastră: tema globală, fundalul, pictogramele, cursoarele, tema GTK, panourile, ecranul de pornire și cel de autentificare.</p>
+    <p xml:lang="ru">Soplos Look Manager меняет внешний вид Soplos Linux Tyson из одного окна: глобальную тему, обои, значки, курсоры, тему GTK, панели, экран запуска и экран входа.</p>
+    <ul>
+      <li>Chooses what is already installed, with a preview, and applies it with the tools of Plasma</li>
+      <li xml:lang="es">Elige entre lo que ya está instalado, con vista previa, y lo aplica con las herramientas de Plasma</li>
+      <li xml:lang="fr">Choisit parmi ce qui est déjà installé, avec un aperçu, et l'applique avec les outils de Plasma</li>
+      <li xml:lang="de">Wählt unter dem bereits Installierten aus, mit Vorschau, und wendet es mit den Werkzeugen von Plasma an</li>
+      <li xml:lang="pt">Escolhe entre o que já está instalado, com pré-visualização, e aplica-o com as ferramentas do Plasma</li>
+      <li xml:lang="it">Sceglie tra ciò che è già installato, con anteprima, e lo applica con gli strumenti di Plasma</li>
+      <li xml:lang="ro">Alege dintre ce este deja instalat, cu previzualizare, și aplică cu uneltele Plasma</li>
+      <li xml:lang="ru">Выбирает из уже установленного, с предпросмотром, и применяет средствами Plasma</li>
+      <li>Adds, changes and removes panels</li>
+      <li xml:lang="es">Añade, cambia y elimina paneles</li>
+      <li xml:lang="fr">Ajoute, modifie et supprime des panneaux</li>
+      <li xml:lang="de">Fügt Leisten hinzu, ändert und entfernt sie</li>
+      <li xml:lang="pt">Adiciona, altera e remove painéis</li>
+      <li xml:lang="it">Aggiunge, modifica e rimuove pannelli</li>
+      <li xml:lang="ro">Adaugă, modifică și elimină panouri</li>
+      <li xml:lang="ru">Добавляет, изменяет и удаляет панели</li>
+      <li>Changes the picture and the NumLock key of the login screen of Plasma Login Manager</li>
+      <li xml:lang="es">Cambia la imagen y la tecla Bloq Num de la pantalla de inicio de sesión de Plasma Login Manager</li>
+      <li xml:lang="fr">Change l'image et la touche Verr. Num de l'écran de connexion de Plasma Login Manager</li>
+      <li xml:lang="de">Ändert das Bild und die Num-Taste des Anmeldebildschirms von Plasma Login Manager</li>
+      <li xml:lang="pt">Altera a imagem e a tecla Num Lock do ecrã de início de sessão do Plasma Login Manager</li>
+      <li xml:lang="it">Cambia l'immagine e il tasto Bloc Num della schermata di accesso di Plasma Login Manager</li>
+      <li xml:lang="ro">Schimbă imaginea și tasta Num Lock a ecranului de autentificare Plasma Login Manager</li>
+      <li xml:lang="ru">Меняет изображение и клавишу Num Lock экрана входа Plasma Login Manager</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">soplos-look-manager.desktop</launchable>
+  <url type="homepage">https://soplos.org</url>
+  <url type="bugtracker">https://github.com/SoplosLinux/soplos-look-manager-3.0/issues</url>
+  <developer id="org.soplos">
+    <name>Sergi Perich</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <categories>
+    <category>Settings</category>
+    <category>DesktopSettings</category>
+  </categories>
+  <provides>
+    <binary>soplos-look-manager</binary>
+  </provides>
+
+  <releases>
+    <release version="3.0.0-alpha" date="2026-11-08">
+      <description>
+        <p>First version. Global themes, wallpapers, icon themes, cursor themes, GTK themes, panels, start-up screen and the login screen of Plasma Login Manager. Not yet tested on a Plasma desktop.</p>
+      </description>
+    </release>
+  </releases>
+</component>

@@ -1,0 +1,86 @@
+{
+  "app": {
+    "tabs": {
+      "themes": { "label": "Themes", "title": "Global themes" },
+      "wallpapers": { "label": "Wallpapers", "title": "Wallpapers" },
+      "icons": { "label": "Icons", "title": "Icon themes" },
+      "cursors": { "label": "Cursors", "title": "Cursor themes" },
+      "gtk": { "label": "GTK", "title": "GTK themes" },
+      "panel": { "label": "Panel", "title": "Panel layout" },
+      "splash": { "label": "Start-up", "title": "Start-up screen" },
+      "login": { "label": "Login", "title": "Plasma Login Manager" }
+    }
+  },
+  "sidebar": {
+    "interfaceLanguage": "Language of this window",
+    "switchToLight": "Switch to the light theme",
+    "switchToDark": "Switch to the dark theme",
+    "aboutTooltip": "About Soplos Look Manager (F1)"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "error": "Error"
+  },
+  "about": {
+    "version": "Version {version}",
+    "tagline": "Themes and layout of Soplos Linux Plasma",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Licensed under the GNU General Public License v3.0 or later"
+  },
+  "empty": {
+    "message": "This page is not written yet."
+  },
+  "looks": {
+    "apply": "Apply",
+    "active": "In use",
+    "status": "{n} available",
+    "none": "Nothing found",
+    "inUse": "In use: {name}",
+    "errors": {
+      "read": "The list could not be read.",
+      "apply": "It could not be applied. Is Plasma running?"
+    }
+  },
+  "login": {
+    "numlock": "NumLock on at login",
+    "notInstalled": "Plasma Login Manager is not installed on this computer.",
+    "note": "The picture is copied for the login screen, so it still shows if the original is moved. It asks for the administrator password.",
+    "errors": {
+      "apply": "The login screen could not be changed."
+    }
+  },
+  "panel": {
+    "location": {
+      "title": "Position",
+      "top": "Top",
+      "bottom": "Bottom",
+      "left": "Left",
+      "right": "Right"
+    },
+    "height": "Height",
+    "floating": "Floating panel",
+    "hiding": {
+      "title": "Hide the panel",
+      "none": "Never",
+      "autohide": "Automatically",
+      "dodgewindows": "When a window covers it",
+      "windowsgobelow": "When a window goes below it"
+    },
+    "apply": "Apply",
+    "note": "The changes are made to the panel that is chosen above.",
+    "name": "Panel {n}",
+    "add": "Add panel",
+    "remove": "Remove panel",
+    "lastOne": "The last panel cannot be removed",
+    "removeTitle": "Remove the panel",
+    "removeQuestion": "The panel is removed with everything it holds. Do you want to remove it?",
+    "errors": {
+      "read": "The panels could not be read. Is Plasma running?",
+      "apply": "The panel could not be changed.",
+      "add": "The panel could not be added.",
+      "remove": "The panel could not be removed."
+    }
+  }
+}

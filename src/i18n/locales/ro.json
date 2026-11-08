@@ -1,0 +1,86 @@
+{
+  "app": {
+    "tabs": {
+      "themes": { "label": "Teme", "title": "Teme globale" },
+      "wallpapers": { "label": "Fundaluri", "title": "Fundaluri de ecran" },
+      "icons": { "label": "Pictograme", "title": "Teme de pictograme" },
+      "cursors": { "label": "Cursoare", "title": "Teme de cursoare" },
+      "gtk": { "label": "GTK", "title": "Teme GTK" },
+      "panel": { "label": "Panou", "title": "Aranjarea panoului" },
+      "splash": { "label": "Pornire", "title": "Ecranul de pornire" },
+      "login": { "label": "Autentificare", "title": "Plasma Login Manager" }
+    }
+  },
+  "sidebar": {
+    "interfaceLanguage": "Limba acestei ferestre",
+    "switchToLight": "Treci la tema deschisă",
+    "switchToDark": "Treci la tema închisă",
+    "aboutTooltip": "Despre Soplos Look Manager (F1)"
+  },
+  "common": {
+    "close": "Închide",
+    "cancel": "Anulează",
+    "ok": "OK",
+    "error": "Eroare"
+  },
+  "about": {
+    "version": "Versiunea {version}",
+    "tagline": "Teme și aranjare pentru Soplos Linux Plasma",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Licențiat sub Licența Publică Generală GNU v3.0 sau ulterioară"
+  },
+  "empty": {
+    "message": "Această pagină nu este scrisă încă."
+  },
+  "looks": {
+    "apply": "Aplică",
+    "active": "În uz",
+    "status": "{n} disponibile",
+    "none": "Nu s-a găsit nimic",
+    "inUse": "În uz: {name}",
+    "errors": {
+      "read": "Lista nu a putut fi citită.",
+      "apply": "Nu a putut fi aplicat. Rulează Plasma?"
+    }
+  },
+  "login": {
+    "numlock": "Num Lock activat la autentificare",
+    "notInstalled": "Plasma Login Manager nu este instalat pe acest calculator.",
+    "note": "Imaginea este copiată pentru ecranul de autentificare, deci se vede chiar dacă originalul este mutat. Se cere parola de administrator.",
+    "errors": {
+      "apply": "Ecranul de autentificare nu a putut fi modificat."
+    }
+  },
+  "panel": {
+    "location": {
+      "title": "Poziție",
+      "top": "Sus",
+      "bottom": "Jos",
+      "left": "Stânga",
+      "right": "Dreapta"
+    },
+    "height": "Înălțime",
+    "floating": "Panou plutitor",
+    "hiding": {
+      "title": "Ascunde panoul",
+      "none": "Niciodată",
+      "autohide": "Automat",
+      "dodgewindows": "Când o fereastră îl acoperă",
+      "windowsgobelow": "Când o fereastră trece dedesubt"
+    },
+    "apply": "Aplică",
+    "note": "Modificările se fac pe panoul ales mai sus.",
+    "name": "Panoul {n}",
+    "add": "Adaugă panou",
+    "remove": "Elimină panoul",
+    "lastOne": "Ultimul panou nu poate fi eliminat",
+    "removeTitle": "Elimină panoul",
+    "removeQuestion": "Panoul este eliminat împreună cu tot ce conține. Vrei să îl elimini?",
+    "errors": {
+      "read": "Panourile nu au putut fi citite. Rulează Plasma?",
+      "apply": "Panoul nu a putut fi modificat.",
+      "add": "Panoul nu a putut fi adăugat.",
+      "remove": "Panoul nu a putut fi eliminat."
+    }
+  }
+}
