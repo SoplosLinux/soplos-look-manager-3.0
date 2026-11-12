@@ -1,6 +1,6 @@
 [package]
 name = "soplos-look-manager"
-version = "3.0.0-alpha"
+version = "3.0.0-beta"
 description = "Soplos Look Manager"
 authors = ["Sergi Perich <info@soploslinux.com>"]
 license = "GPL-3.0-or-later"
@@ -17,7 +17,11 @@ tauri-build = { version = "2", features = [] }
 # No "devtools" feature here: Tauri already enables the inspector
 # automatically on debug builds (cfg(debug_assertions)); declaring the
 # feature would force it on in release builds too.
-tauri = { version = "2", features = [] }
+tauri = { version = "2", features = ["protocol-asset"] }
+# Writes the pictures of the cursors, which come in the format of X.
+png = "0.18"
+# Makes the small copies of the wallpapers; Tauri already uses it on Linux.
+gdk-pixbuf = "0.18"
 tauri-plugin-shell = "2"
 tauri-plugin-single-instance = "2"
 serde = { version = "1", features = ["derive"] }

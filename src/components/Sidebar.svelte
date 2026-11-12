@@ -2,15 +2,34 @@
   import type { ComponentType } from "svelte";
   import { getContext } from "svelte";
   import { theme, toggleTheme } from "../lib/theme";
-  import { Sun, Moon, Globe } from "lucide-svelte";
+  import { Sun, Moon, Globe, ChevronDown } from "lucide-svelte";
   import { _, locale } from "svelte-i18n";
   import { SUPPORTED_LOCALES, LOCALE_NAMES, setLocale, type SupportedLocale } from "../i18n";
+
+  // The sections that are open, kept between runs. All of them start folded.
+  const FOLDED_KEY = "soplos-look-manager-open-sections";
+  function readFolded(): Record<string, boolean> {
+    try {
+      return JSON.parse(localStorage.getItem(FOLDED_KEY) ?? "{}") ?? {};
+    } catch {
+      return {};
+    }
+  }
+  let opened: Record<string, boolean> = readFolded();
+  function toggle(group: string) {
+    opened = { ...opened, [group]: !opened[group] };
+    try {
+      localStorage.setItem(FOLDED_KEY, JSON.stringify(opened));
+    } catch {
+      // Blocked storage: the sections still fold for this session.
+    }
+  }
 
   function onLanguageChange(e: Event) {
     setLocale((e.currentTarget as HTMLSelectElement).value as SupportedLocale);
   }
 
-  export let tabs: { id: string; icon: ComponentType; label: string }[];
+  export let tabs: { id: string; group: string; icon: ComponentType; label: string }[];
   export let active: string;
   export let onSelect: (id: string) => void;
   export let appVersion: string = "";
@@ -48,19 +67,36 @@
     </span>
   </div>
 
-  <nav class="flex flex-col gap-[3px] flex-1">
+  <!-- The pages are in groups, and the menu scrolls when the window is short. -->
+  <!-- The scroll bar gets its own room, so it is not drawn over the buttons. -->
+  <nav class="content-scroll flex flex-col gap-[2px] flex-1 min-h-0 overflow-y-auto pr-3 [scrollbar-gutter:stable]">
     {#each tabs as tab, i}
-      <button
-        title={`${tab.label} (Ctrl+${i + 1})`}
-        class="flex items-center gap-3 px-3.5 py-2.5 rounded text-[0.92rem] text-left transition-colors
-          {active === tab.id
-          ? 'bg-primary/15 text-primary font-semibold'
-          : 'text-text-muted hover:bg-surface hover:text-text-bright'}"
-        on:click={() => onSelect(tab.id)}
-      >
-        <svelte:component this={tab.icon} size={18} class="shrink-0" />
-        <span>{tab.label}</span>
-      </button>
+      {#if i === 0 || tabs[i - 1].group !== tab.group}
+        <!-- A section folds and unfolds; what was chosen is remembered. -->
+        <button
+          class="flex items-center justify-between gap-2 px-3.5 pt-2.5 pb-1 text-left text-[0.62rem] font-semibold tracking-[0.08em] uppercase hover:text-text-bright
+            {tabs.some((t) => t.group === tab.group && t.id === active) ? 'text-primary' : 'text-text-muted/70'}"
+          aria-expanded={!!opened[tab.group]}
+          on:click={() => toggle(tab.group)}
+        >
+          <span>{$_(`app.groups.${tab.group}`)}</span>
+          <ChevronDown size={12} class="shrink-0 transition-transform {opened[tab.group] ? '' : '-rotate-90'}" />
+        </button>
+      {/if}
+      <!-- A folded section shows nothing; the one with the open page has its name in color. -->
+      {#if opened[tab.group]}
+        <button
+          title={i < 9 ? `${tab.label} (Ctrl+${i + 1})` : tab.label}
+          class="flex items-center gap-3 px-3.5 py-2 rounded text-[0.88rem] text-left transition-colors
+            {active === tab.id
+            ? 'bg-primary/15 text-primary font-semibold'
+            : 'text-text-muted hover:bg-surface hover:text-text-bright'}"
+          on:click={() => onSelect(tab.id)}
+        >
+          <svelte:component this={tab.icon} size={17} class="shrink-0" />
+          <span class="truncate">{tab.label}</span>
+        </button>
+      {/if}
     {/each}
   </nav>
 

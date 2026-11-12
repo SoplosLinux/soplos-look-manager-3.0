@@ -1,12 +1,24 @@
 {
   "app": {
+    "groups": { "look": "Look", "desktop": "Desktop", "windows": "Windows", "startup": "Start-up" },
     "tabs": {
       "themes": { "label": "Themes", "title": "Global themes" },
+      "colors": { "label": "Colors", "title": "Color schemes" },
+      "appstyle": { "label": "Applications", "title": "Application style" },
+      "plasmastyle": { "label": "Plasma style", "title": "Plasma style" },
+      "decorations": { "label": "Windows", "title": "Window decorations" },
+      "sounds": { "label": "Sounds", "title": "System sounds" },
       "wallpapers": { "label": "Wallpapers", "title": "Wallpapers" },
       "icons": { "label": "Icons", "title": "Icon themes" },
       "cursors": { "label": "Cursors", "title": "Cursor themes" },
       "gtk": { "label": "GTK", "title": "GTK themes" },
       "panel": { "label": "Panel", "title": "Panel layout" },
+      "desktops": { "label": "Desktops", "title": "Virtual desktops" },
+      "behavior": { "label": "Behavior", "title": "Window behavior" },
+      "rules": { "label": "Rules", "title": "Window rules" },
+      "effects": { "label": "Effects", "title": "Desktop effects" },
+      "scripts": { "label": "Scripts", "title": "KWin scripts" },
+      "tabbox": { "label": "Switcher", "title": "Task switcher" },
       "splash": { "label": "Start-up", "title": "Start-up screen" },
       "login": { "label": "Login", "title": "Plasma Login Manager" }
     }
@@ -32,19 +44,141 @@
   "empty": {
     "message": "This page is not written yet."
   },
+  "install": {
+    "remove": "Remove",
+    "removeTitle": "Remove {name}?",
+    "removeQuestion": "It is deleted from this computer and cannot be undone. A theme of the system asks for the administrator password.",
+    "removeError": "Could not remove it.",
+    "store": "Get new…",
+    "file": "Install from file…",
+    "errors": {
+      "store": "The window of the store could not be opened. It needs the package knewstuff-dialog6.",
+      "file": "It could not be installed."
+    }
+  },
+  "behavior": {
+    "sections": { "focus": "Focus", "placement": "Placement", "snap": "Snapping", "titlebar": "Title bar", "activeTitlebar": "Title bar of the active window", "inactiveTitlebar": "Title bar of an inactive window", "windows": "Inside a window", "modifier": "With a key held down" },
+    "rows": {
+      "FocusPolicy": "Focus policy",
+      "FocusStealingPreventionLevel": "Focus stealing prevention",
+      "ClickRaise": "Click raises the window",
+      "AutoRaise": "Raise the window automatically",
+      "AutoRaiseInterval": "Raise delay (ms)",
+      "DelayFocusInterval": "Focus delay (ms)",
+      "NextFocusPrefersMouse": "The next window is the one under the mouse",
+      "SeparateScreenFocus": "Separate focus for each screen",
+      "Placement": "Placement of new windows",
+      "ActivationDesktopPolicy": "When a window on another desktop is activated",
+      "BorderSnapZone": "Snap to screen edges (px)",
+      "WindowSnapZone": "Snap to windows (px)",
+      "CenterSnapZone": "Snap to the center (px)",
+      "SnapOnlyWhenOverlapping": "Snap only when windows overlap",
+      "TitlebarDoubleClickCommand": "Double click",
+      "DoubleClickBorderToMaximize": "Double click on the border maximizes",
+      "MaximizeButtonLeftClickCommand": "Maximize button, left click",
+      "MaximizeButtonMiddleClickCommand": "Maximize button, middle click",
+      "MaximizeButtonRightClickCommand": "Maximize button, right click",
+      "CommandActiveTitlebar1": "Left click",
+      "CommandActiveTitlebar2": "Middle click",
+      "CommandActiveTitlebar3": "Right click",
+      "CommandTitlebarWheel": "Mouse wheel",
+      "CommandInactiveTitlebar1": "Left click",
+      "CommandInactiveTitlebar2": "Middle click",
+      "CommandInactiveTitlebar3": "Right click",
+      "CommandWindow1": "Left click",
+      "CommandWindow2": "Middle click",
+      "CommandWindow3": "Right click",
+      "CommandWindowWheel": "Mouse wheel",
+      "CommandAllKey": "Key",
+      "CommandAll1": "Left click",
+      "CommandAll2": "Middle click",
+      "CommandAll3": "Right click",
+      "CommandAllWheel": "Mouse wheel"
+    },
+    "choices": {
+      "click": "Click to focus", "follows": "Focus follows mouse", "under": "Focus under mouse", "strictly": "Focus strictly under mouse",
+      "stealNone": "None", "low": "Low", "medium": "Medium", "high": "High", "extreme": "Extreme",
+      "smart": "Smart", "maximizing": "Maximized", "random": "Random", "centered": "Centered", "zeroCorner": "In the top left corner", "underMouse": "Under the mouse",
+      "switchDesktop": "Switch to its desktop", "bringHere": "Bring it to the current desktop",
+      "maximize": "Maximize", "maximizeV": "Maximize vertically", "maximizeH": "Maximize horizontally", "minimize": "Minimize", "lower": "Lower", "close": "Close", "onAllDesktops": "On all desktops", "nothing": "Nothing",
+      "raise": "Raise", "toggle": "Raise or lower", "menu": "Window menu",
+      "activateRaise": "Activate and raise", "activateLower": "Activate and lower", "activate": "Activate",
+      "wheelRaiseLower": "Raise or lower", "wheelMaximize": "Maximize or restore", "wheelAbove": "Keep above or below", "wheelDesktop": "Previous or next desktop", "wheelOpacity": "Change opacity",
+      "passRaiseRelease": "Activate, pass the click and raise on release", "activateRaisePass": "Activate, raise and pass the click", "activatePass": "Activate and pass the click",
+      "scroll": "Scroll", "activateScroll": "Activate and scroll", "activateRaiseScroll": "Activate, raise and scroll",
+      "meta": "Meta", "alt": "Alt",
+      "move": "Move", "activateRaiseMove": "Activate, raise and move", "resize": "Resize", "decOpacity": "Decrease opacity", "incOpacity": "Increase opacity"
+    },
+    "errors": { "read": "The options could not be read.", "apply": "The change could not be made." }
+  },
+  "rules": {
+    "add": "Add rule",
+    "edit": "Edit rule",
+    "remove": "Remove rule",
+    "removeTitle": "Remove {name}?",
+    "removeQuestion": "The rule is deleted and cannot be recovered.",
+    "none": "There are no rules yet.",
+    "newName": "New rule",
+    "save": "Save",
+    "description": "Description",
+    "windowClass": "Window class (application)",
+    "wholeClass": "Match the whole window class",
+    "windowTitle": "Window title",
+    "anyWindow": "Any window",
+    "properties": "What to do",
+    "action": "Action",
+    "width": "Width",
+    "height": "Height",
+    "match": { "any": "Any", "exact": "Exactly", "contains": "Contains", "regex": "Regular expression" },
+    "actions": { "dontAffect": "Do not affect", "force": "Force", "applyInitially": "Apply initially", "remember": "Remember", "applyNow": "Apply now", "forceTemporarily": "Force temporarily" },
+    "props": {
+      "position": "Position", "size": "Size", "maximizehoriz": "Maximized horizontally", "maximizevert": "Maximized vertically", "minimize": "Minimized", "fullscreen": "Full screen",
+      "above": "Keep above", "below": "Keep below", "noborder": "No title bar and frame", "skiptaskbar": "Skip taskbar", "skippager": "Skip pager", "skipswitcher": "Skip switcher",
+      "screen": "Screen", "opacityactive": "Opacity, active (%)", "opacityinactive": "Opacity, inactive (%)"
+    },
+    "errors": { "read": "The rules could not be read.", "apply": "The change could not be made." }
+  },
+  "desktops": {
+    "add": "Add desktop",
+    "rows": "Rows",
+    "wrap": "Cyclic navigation",
+    "name": "Desktop {n}",
+    "rename": "Rename",
+    "remove": "Remove",
+    "errors": {
+      "read": "The desktops could not be read. Is KWin running?",
+      "apply": "The change could not be made."
+    }
+  },
   "looks": {
     "apply": "Apply",
     "active": "In use",
     "status": "{n} available",
     "none": "Nothing found",
-    "inUse": "In use: {name}",
+    "splashNone": "None (no splash screen)",
+    "scheme": {
+      "windowTitle": "Window Title",
+      "windowText": "Window text",
+      "button": "Button",
+      "normal": "Normal text",
+      "highlighted": "Highlighted text",
+      "disabled": "Disabled text",
+      "link": "link",
+      "visited": "visited"
+    },    "inUse": "In use: {name}",
+    "theme": {
+      "title": "Apply {name}?",
+      "intro": "This is what will be applied for this global theme:",
+      "appearance": "Appearance settings",
+      "layout": "Desktop and window layout",
+      "layoutHint": "The panels and the widgets of the desktop are replaced by the ones of the theme."
+    },
     "errors": {
       "read": "The list could not be read.",
-      "apply": "It could not be applied. Is Plasma running?"
+      "apply": "It could not be applied."
     }
   },
   "login": {
-    "numlock": "NumLock on at login",
     "notInstalled": "Plasma Login Manager is not installed on this computer.",
     "note": "The picture is copied for the login screen, so it still shows if the original is moved. It asks for the administrator password.",
     "errors": {
@@ -60,6 +194,25 @@
       "right": "Right"
     },
     "height": "Height",
+    "alignment": { "title": "Alignment", "left": "Start", "center": "Center", "right": "End" },
+    "width": { "title": "Width", "fill": "Fill the width", "fit": "Fit the content", "custom": "Custom" },
+    "minimumLength": "Minimum length",
+    "maximumLength": "Maximum length",
+    "offset": "Offset",
+    "opacity": { "title": "Opacity", "adaptive": "Adaptive", "opaque": "Opaque", "translucent": "Translucent" },
+    "template": { "default": "Default panel", "empty": "Empty panel", "appmenu": "Application menu bar" },
+    "previewHint": "Click an edge of the screen to move the panel there. The drawing is approximate.",
+    "styles": { "title": "Styles", "classic": "Classic panel", "dock": "Dock", "sidebar": "Side bar" },
+    "group": { "elements": "Elements of the panel", "size": "Position and size", "length": "Length and alignment", "more": "Look and behavior" },
+    "elements": {
+      "add": "Add element",
+      "empty": "This panel has no elements yet. Add the ones you want: the menu of applications, the task list, the clock...",
+      "remove": "Remove from the panel",
+      "hint": "A new element goes at the end of the panel, after the ones that are already on it. To change the order, remove the elements that must go later and add them again.",
+      "addTitle": "Add an element to the panel",
+      "search": "Search",
+      "none": "No elements found"
+    },
     "floating": "Floating panel",
     "hiding": {
       "title": "Hide the panel",
@@ -80,7 +233,10 @@
       "read": "The panels could not be read. Is Plasma running?",
       "apply": "The panel could not be changed.",
       "add": "The panel could not be added.",
-      "remove": "The panel could not be removed."
+      "remove": "The panel could not be removed.",
+      "widgets": "The elements of the panel could not be read.",
+      "addWidget": "The element could not be added.",
+      "removeWidget": "The element could not be removed."
     }
   }
 }

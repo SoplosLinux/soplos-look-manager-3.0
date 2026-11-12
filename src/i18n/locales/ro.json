@@ -1,12 +1,24 @@
 {
   "app": {
+    "groups": { "look": "Aspect", "desktop": "Desktop", "windows": "Ferestre", "startup": "Pornire" },
     "tabs": {
       "themes": { "label": "Teme", "title": "Teme globale" },
+      "colors": { "label": "Culori", "title": "Scheme de culori" },
+      "appstyle": { "label": "Aplicații", "title": "Stilul aplicațiilor" },
+      "plasmastyle": { "label": "Stil Plasma", "title": "Stil Plasma" },
+      "decorations": { "label": "Ferestre", "title": "Decorațiile ferestrelor" },
+      "sounds": { "label": "Sunete", "title": "Sunetele sistemului" },
       "wallpapers": { "label": "Fundaluri", "title": "Fundaluri de ecran" },
       "icons": { "label": "Pictograme", "title": "Teme de pictograme" },
       "cursors": { "label": "Cursoare", "title": "Teme de cursoare" },
       "gtk": { "label": "GTK", "title": "Teme GTK" },
       "panel": { "label": "Panou", "title": "Aranjarea panoului" },
+      "desktops": { "label": "Desktopuri", "title": "Desktopuri virtuale" },
+      "behavior": { "label": "Opțiuni", "title": "Comportamentul ferestrelor" },
+      "rules": { "label": "Reguli", "title": "Regulile ferestrelor" },
+      "effects": { "label": "Efecte", "title": "Efecte de desktop" },
+      "scripts": { "label": "Scripturi", "title": "Scripturi KWin" },
+      "tabbox": { "label": "Selector", "title": "Selectorul de activități" },
       "splash": { "label": "Pornire", "title": "Ecranul de pornire" },
       "login": { "label": "Autentificare", "title": "Plasma Login Manager" }
     }
@@ -32,19 +44,141 @@
   "empty": {
     "message": "Această pagină nu este scrisă încă."
   },
+  "install": {
+    "remove": "Elimină",
+    "removeTitle": "Elimini {name}?",
+    "removeQuestion": "Este șters de pe acest calculator și nu se poate anula. O temă a sistemului cere parola de administrator.",
+    "removeError": "Nu a putut fi eliminat.",
+    "store": "Obține noi…",
+    "file": "Instalează din fișier…",
+    "errors": {
+      "store": "Fereastra magazinului nu a putut fi deschisă. Are nevoie de pachetul knewstuff-dialog6.",
+      "file": "Nu a putut fi instalat."
+    }
+  },
+  "behavior": {
+    "sections": { "focus": "Focalizare", "placement": "Amplasare", "snap": "Atragere", "titlebar": "Bara de titlu", "activeTitlebar": "Bara de titlu a ferestrei active", "inactiveTitlebar": "Bara de titlu a unei ferestre inactive", "windows": "În interiorul unei ferestre", "modifier": "Cu o tastă apăsată" },
+    "rows": {
+      "FocusPolicy": "Politica de focalizare",
+      "FocusStealingPreventionLevel": "Prevenirea furtului de focalizare",
+      "ClickRaise": "Clic-ul aduce fereastra în față",
+      "AutoRaise": "Adu fereastra în față automat",
+      "AutoRaiseInterval": "Întârziere la aducerea în față (ms)",
+      "DelayFocusInterval": "Întârzierea focalizării (ms)",
+      "NextFocusPrefersMouse": "Fereastra următoare este cea de sub mouse",
+      "SeparateScreenFocus": "Focalizare separată pentru fiecare ecran",
+      "Placement": "Amplasarea ferestrelor noi",
+      "ActivationDesktopPolicy": "La activarea unei ferestre de pe alt desktop",
+      "BorderSnapZone": "Atragere la marginile ecranului (px)",
+      "WindowSnapZone": "Atragere la ferestre (px)",
+      "CenterSnapZone": "Atragere la centru (px)",
+      "SnapOnlyWhenOverlapping": "Atragere doar când ferestrele se suprapun",
+      "TitlebarDoubleClickCommand": "Dublu clic",
+      "DoubleClickBorderToMaximize": "Dublu clic pe margine maximizează",
+      "MaximizeButtonLeftClickCommand": "Butonul de maximizare, clic stânga",
+      "MaximizeButtonMiddleClickCommand": "Butonul de maximizare, clic mijloc",
+      "MaximizeButtonRightClickCommand": "Butonul de maximizare, clic dreapta",
+      "CommandActiveTitlebar1": "Clic stânga",
+      "CommandActiveTitlebar2": "Clic mijloc",
+      "CommandActiveTitlebar3": "Clic dreapta",
+      "CommandTitlebarWheel": "Rotița mouse-ului",
+      "CommandInactiveTitlebar1": "Clic stânga",
+      "CommandInactiveTitlebar2": "Clic mijloc",
+      "CommandInactiveTitlebar3": "Clic dreapta",
+      "CommandWindow1": "Clic stânga",
+      "CommandWindow2": "Clic mijloc",
+      "CommandWindow3": "Clic dreapta",
+      "CommandWindowWheel": "Rotița mouse-ului",
+      "CommandAllKey": "Tasta",
+      "CommandAll1": "Clic stânga",
+      "CommandAll2": "Clic mijloc",
+      "CommandAll3": "Clic dreapta",
+      "CommandAllWheel": "Rotița mouse-ului"
+    },
+    "choices": {
+      "click": "Clic pentru focalizare", "follows": "Focalizarea urmează mouse-ul", "under": "Focalizare sub mouse", "strictly": "Focalizare strict sub mouse",
+      "stealNone": "Niciuna", "low": "Scăzută", "medium": "Medie", "high": "Ridicată", "extreme": "Extremă",
+      "smart": "Inteligentă", "maximizing": "Maximizată", "random": "Aleatorie", "centered": "Centrată", "zeroCorner": "În colțul din stânga sus", "underMouse": "Sub mouse",
+      "switchDesktop": "Treci la desktopul ei", "bringHere": "Adu-o pe desktopul curent",
+      "maximize": "Maximizează", "maximizeV": "Maximizează pe verticală", "maximizeH": "Maximizează pe orizontală", "minimize": "Minimizează", "lower": "Pune în spate", "close": "Închide", "onAllDesktops": "Pe toate desktopurile", "nothing": "Nimic",
+      "raise": "Adu în față", "toggle": "În față sau în spate", "menu": "Meniul ferestrei",
+      "activateRaise": "Activează și adu în față", "activateLower": "Activează și pune în spate", "activate": "Activează",
+      "wheelRaiseLower": "În față sau în spate", "wheelMaximize": "Maximizează sau restaurează", "wheelAbove": "Păstrează deasupra sau dedesubt", "wheelDesktop": "Desktopul anterior sau următor", "wheelOpacity": "Schimbă opacitatea",
+      "passRaiseRelease": "Activează, transmite clic-ul și adu în față la eliberare", "activateRaisePass": "Activează, adu în față și transmite clic-ul", "activatePass": "Activează și transmite clic-ul",
+      "scroll": "Derulează", "activateScroll": "Activează și derulează", "activateRaiseScroll": "Activează, adu în față și derulează",
+      "meta": "Meta", "alt": "Alt",
+      "move": "Mută", "activateRaiseMove": "Activează, adu în față și mută", "resize": "Redimensionează", "decOpacity": "Scade opacitatea", "incOpacity": "Crește opacitatea"
+    },
+    "errors": { "read": "Opțiunile nu au putut fi citite.", "apply": "Schimbarea nu a putut fi făcută." }
+  },
+  "rules": {
+    "add": "Adaugă regulă",
+    "edit": "Editează regula",
+    "remove": "Elimină regula",
+    "removeTitle": "Elimini {name}?",
+    "removeQuestion": "Regula este ștearsă și nu mai poate fi recuperată.",
+    "none": "Nu există încă reguli.",
+    "newName": "Regulă nouă",
+    "save": "Salvează",
+    "description": "Descriere",
+    "windowClass": "Clasa ferestrei (aplicație)",
+    "wholeClass": "Compară clasa completă a ferestrei",
+    "windowTitle": "Titlul ferestrei",
+    "anyWindow": "Orice fereastră",
+    "properties": "Ce se face",
+    "action": "Acțiune",
+    "width": "Lățime",
+    "height": "Înălțime",
+    "match": { "any": "Oricare", "exact": "Exact", "contains": "Conține", "regex": "Expresie regulată" },
+    "actions": { "dontAffect": "Nu afecta", "force": "Forțează", "applyInitially": "Aplică la început", "remember": "Ține minte", "applyNow": "Aplică acum", "forceTemporarily": "Forțează temporar" },
+    "props": {
+      "position": "Poziție", "size": "Dimensiune", "maximizehoriz": "Maximizată pe orizontală", "maximizevert": "Maximizată pe verticală", "minimize": "Minimizată", "fullscreen": "Ecran complet",
+      "above": "Păstrează deasupra", "below": "Păstrează dedesubt", "noborder": "Fără bară de titlu și ramă", "skiptaskbar": "Omite din bara de activități", "skippager": "Omite din paginator", "skipswitcher": "Omite din selector",
+      "screen": "Ecran", "opacityactive": "Opacitate, activă (%)", "opacityinactive": "Opacitate, inactivă (%)"
+    },
+    "errors": { "read": "Regulile nu au putut fi citite.", "apply": "Schimbarea nu a putut fi făcută." }
+  },
+  "desktops": {
+    "add": "Adaugă desktop",
+    "rows": "Rânduri",
+    "wrap": "Navigare ciclică",
+    "name": "Desktop {n}",
+    "rename": "Redenumește",
+    "remove": "Elimină",
+    "errors": {
+      "read": "Desktopurile nu au putut fi citite. Rulează KWin?",
+      "apply": "Schimbarea nu a putut fi făcută."
+    }
+  },
   "looks": {
     "apply": "Aplică",
     "active": "În uz",
     "status": "{n} disponibile",
     "none": "Nu s-a găsit nimic",
-    "inUse": "În uz: {name}",
+    "splashNone": "Niciunul (fără ecran de pornire)",
+    "scheme": {
+      "windowTitle": "Titlul ferestrei",
+      "windowText": "Textul ferestrei",
+      "button": "Buton",
+      "normal": "Text normal",
+      "highlighted": "Text evidențiat",
+      "disabled": "Text dezactivat",
+      "link": "legătură",
+      "visited": "vizitată"
+    },    "inUse": "În uz: {name}",
+    "theme": {
+      "title": "Aplici {name}?",
+      "intro": "Pentru această temă globală se vor aplica următoarele:",
+      "appearance": "Preferințe de aspect",
+      "layout": "Aranjarea desktopului și a ferestrelor",
+      "layoutHint": "Panourile și widgeturile desktopului sunt înlocuite cu cele ale temei."
+    },
     "errors": {
       "read": "Lista nu a putut fi citită.",
-      "apply": "Nu a putut fi aplicat. Rulează Plasma?"
+      "apply": "Nu a putut fi aplicat."
     }
   },
   "login": {
-    "numlock": "Num Lock activat la autentificare",
     "notInstalled": "Plasma Login Manager nu este instalat pe acest calculator.",
     "note": "Imaginea este copiată pentru ecranul de autentificare, deci se vede chiar dacă originalul este mutat. Se cere parola de administrator.",
     "errors": {
@@ -60,6 +194,25 @@
       "right": "Dreapta"
     },
     "height": "Înălțime",
+    "alignment": { "title": "Aliniere", "left": "Început", "center": "Centru", "right": "Sfârșit" },
+    "width": { "title": "Lățime", "fill": "Umple lățimea", "fit": "Potrivește conținutului", "custom": "Personalizată" },
+    "minimumLength": "Lungime minimă",
+    "maximumLength": "Lungime maximă",
+    "offset": "Decalaj",
+    "opacity": { "title": "Opacitate", "adaptive": "Adaptivă", "opaque": "Opacă", "translucent": "Translucidă" },
+    "template": { "default": "Panou implicit", "empty": "Panou gol", "appmenu": "Bara de meniu a aplicației" },
+    "previewHint": "Apasă pe o margine a ecranului pentru a muta panoul acolo. Desenul este aproximativ.",
+    "styles": { "title": "Stiluri", "classic": "Panou clasic", "dock": "Dock", "sidebar": "Bară laterală" },
+    "group": { "elements": "Elementele panoului", "size": "Poziție și dimensiune", "length": "Lungime și aliniere", "more": "Aspect și comportament" },
+    "elements": {
+      "add": "Adaugă element",
+      "empty": "Acest panou nu are încă elemente. Adaugă-le pe cele dorite: meniul de aplicații, lista de activități, ceasul...",
+      "remove": "Scoate din panou",
+      "hint": "Un element nou se pune la sfârșitul panoului, după cele existente. Pentru a schimba ordinea, scoate elementele care trebuie să fie după și adaugă-le din nou.",
+      "addTitle": "Adaugă un element în panou",
+      "search": "Caută",
+      "none": "Nu s-a găsit niciun element"
+    },
     "floating": "Panou plutitor",
     "hiding": {
       "title": "Ascunde panoul",
@@ -80,7 +233,10 @@
       "read": "Panourile nu au putut fi citite. Rulează Plasma?",
       "apply": "Panoul nu a putut fi modificat.",
       "add": "Panoul nu a putut fi adăugat.",
-      "remove": "Panoul nu a putut fi eliminat."
+      "remove": "Panoul nu a putut fi eliminat.",
+      "widgets": "Elementele panoului nu au putut fi citite.",
+      "addWidget": "Elementul nu a putut fi adăugat.",
+      "removeWidget": "Elementul nu a putut fi scos."
     }
   }
 }

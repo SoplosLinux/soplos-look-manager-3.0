@@ -1,11 +1,11 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "soplos-look-manager",
-  "version": "3.0.0-alpha",
+  "version": "3.0.0-beta",
   "identifier": "org.soplos.lookmanager",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "npm run build:helper && npm run build",
     "devUrl": "http://localhost:1433",
     "frontendDist": "../dist"
   },
@@ -23,7 +23,18 @@
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "/usr/share/**",
+          "$HOME/**",
+          "$HOME/.local/share/**",
+          "$HOME/.themes/**",
+          "$HOME/.icons/**",
+          "$HOME/.cache/soplos-look-manager/**"
+        ]
+      }
     }
   },
   "bundle": {
@@ -50,7 +61,20 @@
         "section": "utils",
         "priority": "optional",
         "depends": [
-          "pkexec | policykit-1"
+          "pkexec | policykit-1",
+          "libqt6widgets6",
+          "libqt6quick6",
+          "libkf6svg6",
+          "libkf6colorscheme6",
+          "libkf6package6",
+          "libkf6configcore6",
+          "libkf6coreaddons6",
+          "libkdecorations3-6",
+          "libkdecorations3private2",
+          "kpackagetool6",
+          "knewstuff-dialog6",
+          "kdialog | zenity",
+          "unzip"
         ],
         "recommends": [
           "plasma-desktop"
@@ -58,6 +82,7 @@
         "changelog": "../CHANGELOG.md",
         "desktopTemplate": "resources/debian/soplos-look-manager.desktop.hbs",
         "files": {
+          "/usr/lib/soplos-look-manager/soplos-look-manager-style-preview": "resources/lib/soplos-look-manager-style-preview",
           "/usr/share/polkit-1/actions/org.soplos.lookmanager.policy": "resources/polkit/org.soplos.lookmanager.policy",
           "/usr/share/metainfo/org.soplos.lookmanager.metainfo.xml": "resources/appstream/org.soplos.lookmanager.metainfo.xml",
           "/usr/share/doc/soplos-look-manager/copyright": "resources/debian/copyright"

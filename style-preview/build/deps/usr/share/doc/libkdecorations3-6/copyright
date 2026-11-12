@@ -1,0 +1,103 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kdecoration
+Source: https://invent.kde.org/plasma/kdecoration
+Upstream-Contact: plasma-devel@kde.org
+
+Files: *
+Copyright: 2021, Alexander Lohnau <alexander.lohnau@gmx.de>
+           2014, Martin Gräßlin <mgraesslin@kde.org>
+           2024, Xaver Hugl <xaver.hugl@gmail.com>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: po/*
+Copyright: 2025, Adrián Chaves (Gallaecio)
+           2025, Alexander Becker <alex-at-kde-l10n-de@freenet.de>
+           2021-2025, Alexander Yavorsky <kekcuha@gmail.com>
+           2018-2021, Burkhard Lück <lueck@hube-lueck.de>
+           2018-2025, Eloy Cuadra <ecuadra@eloihr.net>
+           2022-2025, Emir SARI <emir_sari@icloud.com>
+           2018, Frederik Schwarzer <schwarzer@kde.org>
+           2018-2025, Freek de Kruijf <freekdekruijf@kde.nl>
+           2025, Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+           2024, Guðmundur Erlingsson <gudmundure@gmail.com>
+           2025, KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+           2023-2025, Kisaragi Hiu <mail@kisaragi-hiu.com>
+           2024, Kishore G <kishore96@gmail.com>
+           2022-2025, Mincho Kondarev <mkondarev@yahoo.de>
+           2018-2025, Paolo Zamponi <feus73@gmail.com>
+           2020-2025, Sergiu Bivol <sergiu@cip.md>
+           2018-2025, Shinjo Park <kde@peremen.name>
+           2018-2025, Stefan Asserhäll <stefan.asserhall@gmail.com>
+           2018-2025, Tommi Nieminen <translator@legisign.org>
+           2024-2025, Toms Trasūns <toms.trasuns@posteo.net>
+           2021-2025, Xavier Besnard <xavier.besnard@kde.org>
+           2024-2025, Yaron Shahrabani <sh.yaron@gmail.com>
+           2023-2025, Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+           2018-2025, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Files: .gitlab-ci.yml
+       .kde-ci.yml
+Copyright: None
+License: CC0-1.0
+
+Files: debian/*
+Copyright: 2025, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2014, Harald Sitter <sitter@kde.org>
+           2022-2024, Patrick Franz <deltaone@debian.org>
+License: LGPL-2.0-or-later
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all
+ copyright and related and neighboring rights to this software to the
+ public domain worldwide. This software is distributed without any
+ warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication
+ along with this software. If not, see
+ <https://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the complete text of the CC0 Public Domain
+ Dedication can be found in `/usr/share/common-licenses/CC0-1.0’.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option)  any later version.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/LGPL-2’.
+
+License: LGPL-2.1-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in
+ `/usr/share/common-licenses/LGPL-2.1’.
+
+License: LGPL-3.0-only
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 3 as published by the Free Software Foundation.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/LGPL-3’.
+
+License: LicenseRef-KDE-Accepted-LGPL
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 3 of the
+ license or (at your option) any later version that is accepted by
+ the membership of KDE e.V. (or its successor approved by the
+ membership of KDE e.V.), which shall act as a proxy as defined in
+ Section 6 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.

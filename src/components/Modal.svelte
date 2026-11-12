@@ -16,6 +16,8 @@
   // Choice popups put their own buttons in the body and skip the footer.
   export let showFooter = true;
   export let confirmDisabled = false;
+  // A dialog that only holds a list or a form has no icon of a kind of message.
+  export let showIcon = true;
 
   const icons = { info: Info, confirm: HelpCircle, warning: AlertTriangle, danger: ShieldAlert };
   const iconTint = {
@@ -60,9 +62,11 @@
     on:click|stopPropagation
   >
     <div class="flex items-start gap-3 px-5 pt-5 pb-3">
-      <div class="w-9 h-9 rounded-full grid place-items-center shrink-0 {iconTint[variant]}">
-        <svelte:component this={icons[variant]} size={19} />
-      </div>
+      {#if showIcon}
+        <div class="w-9 h-9 rounded-full grid place-items-center shrink-0 {iconTint[variant]}">
+          <svelte:component this={icons[variant]} size={19} />
+        </div>
+      {/if}
       <div class="min-w-0 flex-1 pt-1">
         {#if title}
           <h3 class="text-text-bright font-semibold text-[1rem] leading-snug">{title}</h3>

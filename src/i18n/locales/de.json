@@ -1,12 +1,24 @@
 {
   "app": {
+    "groups": { "look": "Aussehen", "desktop": "Arbeitsfläche", "windows": "Fenster", "startup": "Start" },
     "tabs": {
       "themes": { "label": "Themen", "title": "Globale Themen" },
+      "colors": { "label": "Farben", "title": "Farbschemata" },
+      "appstyle": { "label": "Anwendungen", "title": "Anwendungsstil" },
+      "plasmastyle": { "label": "Plasma-Stil", "title": "Plasma-Stil" },
+      "decorations": { "label": "Fenster", "title": "Fensterdekorationen" },
+      "sounds": { "label": "Klänge", "title": "Systemklänge" },
       "wallpapers": { "label": "Hintergründe", "title": "Hintergrundbilder" },
       "icons": { "label": "Symbole", "title": "Symbolthemen" },
       "cursors": { "label": "Zeiger", "title": "Zeigerthemen" },
       "gtk": { "label": "GTK", "title": "GTK-Themen" },
       "panel": { "label": "Leiste", "title": "Anordnung der Leiste" },
+      "desktops": { "label": "Arbeitsflächen", "title": "Virtuelle Arbeitsflächen" },
+      "behavior": { "label": "Verhalten", "title": "Fensterverhalten" },
+      "rules": { "label": "Regeln", "title": "Fensterregeln" },
+      "effects": { "label": "Effekte", "title": "Arbeitsflächeneffekte" },
+      "scripts": { "label": "Skripte", "title": "KWin-Skripte" },
+      "tabbox": { "label": "Wechsler", "title": "Fensterwechsler" },
       "splash": { "label": "Start", "title": "Startbildschirm" },
       "login": { "label": "Anmeldung", "title": "Plasma Login Manager" }
     }
@@ -32,19 +44,141 @@
   "empty": {
     "message": "Diese Seite ist noch nicht geschrieben."
   },
+  "install": {
+    "remove": "Entfernen",
+    "removeTitle": "{name} entfernen?",
+    "removeQuestion": "Es wird von diesem Computer gelöscht und das lässt sich nicht rückgängig machen. Für ein Systemthema wird das Administratorpasswort verlangt.",
+    "removeError": "Konnte nicht entfernt werden.",
+    "store": "Neue holen …",
+    "file": "Aus Datei installieren …",
+    "errors": {
+      "store": "Das Fenster des Stores konnte nicht geöffnet werden. Es braucht das Paket knewstuff-dialog6.",
+      "file": "Es konnte nicht installiert werden."
+    }
+  },
+  "behavior": {
+    "sections": { "focus": "Fokus", "placement": "Platzierung", "snap": "Einrasten", "titlebar": "Titelleiste", "activeTitlebar": "Titelleiste des aktiven Fensters", "inactiveTitlebar": "Titelleiste eines inaktiven Fensters", "windows": "Innerhalb eines Fensters", "modifier": "Bei gedrückter Taste" },
+    "rows": {
+      "FocusPolicy": "Fokusrichtlinie",
+      "FocusStealingPreventionLevel": "Schutz vor Fokusdiebstahl",
+      "ClickRaise": "Klick holt das Fenster nach vorn",
+      "AutoRaise": "Fenster automatisch nach vorn holen",
+      "AutoRaiseInterval": "Verzögerung nach vorn (ms)",
+      "DelayFocusInterval": "Fokusverzögerung (ms)",
+      "NextFocusPrefersMouse": "Nächstes Fenster ist das unter der Maus",
+      "SeparateScreenFocus": "Getrennter Fokus für jeden Bildschirm",
+      "Placement": "Platzierung neuer Fenster",
+      "ActivationDesktopPolicy": "Beim Aktivieren eines Fensters auf einer anderen Arbeitsfläche",
+      "BorderSnapZone": "Einrasten an Bildschirmrändern (px)",
+      "WindowSnapZone": "Einrasten an Fenstern (px)",
+      "CenterSnapZone": "Einrasten in der Mitte (px)",
+      "SnapOnlyWhenOverlapping": "Nur einrasten, wenn sich Fenster überlappen",
+      "TitlebarDoubleClickCommand": "Doppelklick",
+      "DoubleClickBorderToMaximize": "Doppelklick auf den Rand maximiert",
+      "MaximizeButtonLeftClickCommand": "Maximieren-Schaltfläche, Linksklick",
+      "MaximizeButtonMiddleClickCommand": "Maximieren-Schaltfläche, Mittelklick",
+      "MaximizeButtonRightClickCommand": "Maximieren-Schaltfläche, Rechtsklick",
+      "CommandActiveTitlebar1": "Linksklick",
+      "CommandActiveTitlebar2": "Mittelklick",
+      "CommandActiveTitlebar3": "Rechtsklick",
+      "CommandTitlebarWheel": "Mausrad",
+      "CommandInactiveTitlebar1": "Linksklick",
+      "CommandInactiveTitlebar2": "Mittelklick",
+      "CommandInactiveTitlebar3": "Rechtsklick",
+      "CommandWindow1": "Linksklick",
+      "CommandWindow2": "Mittelklick",
+      "CommandWindow3": "Rechtsklick",
+      "CommandWindowWheel": "Mausrad",
+      "CommandAllKey": "Taste",
+      "CommandAll1": "Linksklick",
+      "CommandAll2": "Mittelklick",
+      "CommandAll3": "Rechtsklick",
+      "CommandAllWheel": "Mausrad"
+    },
+    "choices": {
+      "click": "Fokus per Klick", "follows": "Fokus folgt der Maus", "under": "Fokus unter der Maus", "strictly": "Fokus strikt unter der Maus",
+      "stealNone": "Keiner", "low": "Niedrig", "medium": "Mittel", "high": "Hoch", "extreme": "Extrem",
+      "smart": "Intelligent", "maximizing": "Maximiert", "random": "Zufällig", "centered": "Zentriert", "zeroCorner": "In der oberen linken Ecke", "underMouse": "Unter der Maus",
+      "switchDesktop": "Zu ihrer Arbeitsfläche wechseln", "bringHere": "Auf die aktuelle Arbeitsfläche holen",
+      "maximize": "Maximieren", "maximizeV": "Vertikal maximieren", "maximizeH": "Horizontal maximieren", "minimize": "Minimieren", "lower": "Nach hinten", "close": "Schließen", "onAllDesktops": "Auf allen Arbeitsflächen", "nothing": "Nichts",
+      "raise": "Nach vorn", "toggle": "Nach vorn oder hinten", "menu": "Fenstermenü",
+      "activateRaise": "Aktivieren und nach vorn", "activateLower": "Aktivieren und nach hinten", "activate": "Aktivieren",
+      "wheelRaiseLower": "Nach vorn oder hinten", "wheelMaximize": "Maximieren oder wiederherstellen", "wheelAbove": "Immer oben oder unten", "wheelDesktop": "Vorherige oder nächste Arbeitsfläche", "wheelOpacity": "Deckkraft ändern",
+      "passRaiseRelease": "Aktivieren, Klick weitergeben und beim Loslassen nach vorn", "activateRaisePass": "Aktivieren, nach vorn und Klick weitergeben", "activatePass": "Aktivieren und Klick weitergeben",
+      "scroll": "Scrollen", "activateScroll": "Aktivieren und scrollen", "activateRaiseScroll": "Aktivieren, nach vorn und scrollen",
+      "meta": "Meta", "alt": "Alt",
+      "move": "Verschieben", "activateRaiseMove": "Aktivieren, nach vorn und verschieben", "resize": "Größe ändern", "decOpacity": "Deckkraft verringern", "incOpacity": "Deckkraft erhöhen"
+    },
+    "errors": { "read": "Die Optionen konnten nicht gelesen werden.", "apply": "Die Änderung konnte nicht vorgenommen werden." }
+  },
+  "rules": {
+    "add": "Regel hinzufügen",
+    "edit": "Regel bearbeiten",
+    "remove": "Regel entfernen",
+    "removeTitle": "{name} entfernen?",
+    "removeQuestion": "Die Regel wird gelöscht und lässt sich nicht wiederherstellen.",
+    "none": "Es gibt noch keine Regeln.",
+    "newName": "Neue Regel",
+    "save": "Speichern",
+    "description": "Beschreibung",
+    "windowClass": "Fensterklasse (Anwendung)",
+    "wholeClass": "Die ganze Fensterklasse vergleichen",
+    "windowTitle": "Fenstertitel",
+    "anyWindow": "Jedes Fenster",
+    "properties": "Was geschehen soll",
+    "action": "Aktion",
+    "width": "Breite",
+    "height": "Höhe",
+    "match": { "any": "Beliebig", "exact": "Genau", "contains": "Enthält", "regex": "Regulärer Ausdruck" },
+    "actions": { "dontAffect": "Nicht beeinflussen", "force": "Erzwingen", "applyInitially": "Anfangs anwenden", "remember": "Merken", "applyNow": "Jetzt anwenden", "forceTemporarily": "Vorübergehend erzwingen" },
+    "props": {
+      "position": "Position", "size": "Größe", "maximizehoriz": "Horizontal maximiert", "maximizevert": "Vertikal maximiert", "minimize": "Minimiert", "fullscreen": "Vollbild",
+      "above": "Immer im Vordergrund", "below": "Immer im Hintergrund", "noborder": "Keine Titelleiste und kein Rahmen", "skiptaskbar": "Nicht in der Kontrollleiste", "skippager": "Nicht im Umschalter", "skipswitcher": "Nicht im Fensterwechsler",
+      "screen": "Bildschirm", "opacityactive": "Deckkraft, aktiv (%)", "opacityinactive": "Deckkraft, inaktiv (%)"
+    },
+    "errors": { "read": "Die Regeln konnten nicht gelesen werden.", "apply": "Die Änderung konnte nicht vorgenommen werden." }
+  },
+  "desktops": {
+    "add": "Arbeitsfläche hinzufügen",
+    "rows": "Zeilen",
+    "wrap": "Zyklische Navigation",
+    "name": "Arbeitsfläche {n}",
+    "rename": "Umbenennen",
+    "remove": "Entfernen",
+    "errors": {
+      "read": "Die Arbeitsflächen konnten nicht gelesen werden. Läuft KWin?",
+      "apply": "Die Änderung konnte nicht vorgenommen werden."
+    }
+  },
   "looks": {
     "apply": "Anwenden",
     "active": "In Verwendung",
     "status": "{n} verfügbar",
     "none": "Nichts gefunden",
-    "inUse": "In Verwendung: {name}",
+    "splashNone": "Keiner (kein Startbildschirm)",
+    "scheme": {
+      "windowTitle": "Fenstertitel",
+      "windowText": "Fenstertext",
+      "button": "Knopf",
+      "normal": "Normaler Text",
+      "highlighted": "Hervorgehobener Text",
+      "disabled": "Deaktivierter Text",
+      "link": "Link",
+      "visited": "besucht"
+    },    "inUse": "In Verwendung: {name}",
+    "theme": {
+      "title": "{name} anwenden?",
+      "intro": "Folgendes wird für dieses globale Thema angewendet:",
+      "appearance": "Einstellungen zum Erscheinungsbild",
+      "layout": "Arbeitsflächen- und Fensterlayout",
+      "layoutHint": "Die Leisten und die Widgets der Arbeitsfläche werden durch die des Themas ersetzt."
+    },
     "errors": {
       "read": "Die Liste konnte nicht gelesen werden.",
-      "apply": "Es konnte nicht angewendet werden. Läuft Plasma?"
+      "apply": "Es konnte nicht angewendet werden."
     }
   },
   "login": {
-    "numlock": "Num-Taste bei der Anmeldung aktiviert",
     "notInstalled": "Plasma Login Manager ist auf diesem Computer nicht installiert.",
     "note": "Das Bild wird für den Anmeldebildschirm kopiert und bleibt sichtbar, auch wenn das Original verschoben wird. Es wird das Administratorpasswort verlangt.",
     "errors": {
@@ -60,6 +194,25 @@
       "right": "Rechts"
     },
     "height": "Höhe",
+    "alignment": { "title": "Ausrichtung", "left": "Anfang", "center": "Mitte", "right": "Ende" },
+    "width": { "title": "Breite", "fill": "Breite ausfüllen", "fit": "An den Inhalt anpassen", "custom": "Benutzerdefiniert" },
+    "minimumLength": "Minimale Länge",
+    "maximumLength": "Maximale Länge",
+    "offset": "Versatz",
+    "opacity": { "title": "Deckkraft", "adaptive": "Adaptiv", "opaque": "Deckend", "translucent": "Transparent" },
+    "template": { "default": "Standardleiste", "empty": "Leere Leiste", "appmenu": "Menüleiste der Anwendung" },
+    "previewHint": "Klicke auf einen Rand des Bildschirms, um die Leiste dorthin zu verschieben. Die Zeichnung ist ungefähr.",
+    "styles": { "title": "Stile", "classic": "Klassische Leiste", "dock": "Dock", "sidebar": "Seitenleiste" },
+    "group": { "elements": "Elemente der Leiste", "size": "Position und Größe", "length": "Länge und Ausrichtung", "more": "Aussehen und Verhalten" },
+    "elements": {
+      "add": "Element hinzufügen",
+      "empty": "Diese Leiste hat noch keine Elemente. Füge hinzu, was du willst: das Anwendungsmenü, die Aufgabenliste, die Uhr ...",
+      "remove": "Von der Leiste entfernen",
+      "hint": "Ein neues Element kommt ans Ende der Leiste, hinter die vorhandenen. Um die Reihenfolge zu ändern, entferne die Elemente, die später kommen sollen, und füge sie erneut hinzu.",
+      "addTitle": "Der Leiste ein Element hinzufügen",
+      "search": "Suchen",
+      "none": "Keine Elemente gefunden"
+    },
     "floating": "Schwebende Leiste",
     "hiding": {
       "title": "Leiste ausblenden",
@@ -80,7 +233,10 @@
       "read": "Die Leisten konnten nicht gelesen werden. Läuft Plasma?",
       "apply": "Die Leiste konnte nicht geändert werden.",
       "add": "Die Leiste konnte nicht hinzugefügt werden.",
-      "remove": "Die Leiste konnte nicht entfernt werden."
+      "remove": "Die Leiste konnte nicht entfernt werden.",
+      "widgets": "Die Elemente der Leiste konnten nicht gelesen werden.",
+      "addWidget": "Das Element konnte nicht hinzugefügt werden.",
+      "removeWidget": "Das Element konnte nicht entfernt werden."
     }
   }
 }

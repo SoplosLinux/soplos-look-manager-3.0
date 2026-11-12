@@ -1,12 +1,24 @@
 {
   "app": {
+    "groups": { "look": "Aspecto", "desktop": "Escritorio", "windows": "Ventanas", "startup": "Inicio" },
     "tabs": {
       "themes": { "label": "Temas", "title": "Temas globales" },
+      "colors": { "label": "Colores", "title": "Colores" },
+      "appstyle": { "label": "Aplicaciones", "title": "Estilo de las aplicaciones" },
+      "plasmastyle": { "label": "Estilo de Plasma", "title": "Estilo de Plasma" },
+      "decorations": { "label": "Ventanas", "title": "Decoraciones de las ventanas" },
+      "sounds": { "label": "Sonidos", "title": "Sonidos del sistema" },
       "wallpapers": { "label": "Fondos", "title": "Fondos de pantalla" },
       "icons": { "label": "Iconos", "title": "Temas de iconos" },
       "cursors": { "label": "Cursores", "title": "Temas de cursores" },
       "gtk": { "label": "GTK", "title": "Temas GTK" },
       "panel": { "label": "Panel", "title": "Disposición del panel" },
+      "desktops": { "label": "Escritorios", "title": "Escritorios virtuales" },
+      "behavior": { "label": "Opciones", "title": "Comportamiento de las ventanas" },
+      "rules": { "label": "Reglas", "title": "Reglas de las ventanas" },
+      "effects": { "label": "Efectos", "title": "Efectos del escritorio" },
+      "scripts": { "label": "Guiones", "title": "Guiones de KWin" },
+      "tabbox": { "label": "Selector", "title": "Selector de tareas" },
       "splash": { "label": "Arranque", "title": "Pantalla de arranque" },
       "login": { "label": "Inicio de sesión", "title": "Plasma Login Manager" }
     }
@@ -32,19 +44,141 @@
   "empty": {
     "message": "Esta página aún no está escrita."
   },
+  "install": {
+    "remove": "Eliminar",
+    "removeTitle": "¿Eliminar {name}?",
+    "removeQuestion": "Se borra de este equipo y no se puede deshacer. Un tema del sistema pide la contraseña de administrador.",
+    "removeError": "No se pudo eliminar.",
+    "store": "Obtener nuevos…",
+    "file": "Instalar desde archivo…",
+    "errors": {
+      "store": "No se pudo abrir la ventana de la tienda. Necesita el paquete knewstuff-dialog6.",
+      "file": "No se pudo instalar."
+    }
+  },
+  "behavior": {
+    "sections": { "focus": "Foco", "placement": "Colocación", "snap": "Imán", "titlebar": "Barra de título", "activeTitlebar": "Barra de título de la ventana activa", "inactiveTitlebar": "Barra de título de una ventana inactiva", "windows": "Dentro de una ventana", "modifier": "Con una tecla pulsada" },
+    "rows": {
+      "FocusPolicy": "Política de foco",
+      "FocusStealingPreventionLevel": "Prevención de robo de foco",
+      "ClickRaise": "El clic eleva la ventana",
+      "AutoRaise": "Elevar la ventana automáticamente",
+      "AutoRaiseInterval": "Retardo de elevación (ms)",
+      "DelayFocusInterval": "Retardo del foco (ms)",
+      "NextFocusPrefersMouse": "La siguiente ventana es la que está bajo el ratón",
+      "SeparateScreenFocus": "Foco separado para cada pantalla",
+      "Placement": "Colocación de las ventanas nuevas",
+      "ActivationDesktopPolicy": "Al activar una ventana de otro escritorio",
+      "BorderSnapZone": "Imán a los bordes de la pantalla (px)",
+      "WindowSnapZone": "Imán a las ventanas (px)",
+      "CenterSnapZone": "Imán al centro (px)",
+      "SnapOnlyWhenOverlapping": "Imán solo cuando las ventanas se solapan",
+      "TitlebarDoubleClickCommand": "Doble clic",
+      "DoubleClickBorderToMaximize": "El doble clic en el borde maximiza",
+      "MaximizeButtonLeftClickCommand": "Botón de maximizar, clic izquierdo",
+      "MaximizeButtonMiddleClickCommand": "Botón de maximizar, clic central",
+      "MaximizeButtonRightClickCommand": "Botón de maximizar, clic derecho",
+      "CommandActiveTitlebar1": "Clic izquierdo",
+      "CommandActiveTitlebar2": "Clic central",
+      "CommandActiveTitlebar3": "Clic derecho",
+      "CommandTitlebarWheel": "Rueda del ratón",
+      "CommandInactiveTitlebar1": "Clic izquierdo",
+      "CommandInactiveTitlebar2": "Clic central",
+      "CommandInactiveTitlebar3": "Clic derecho",
+      "CommandWindow1": "Clic izquierdo",
+      "CommandWindow2": "Clic central",
+      "CommandWindow3": "Clic derecho",
+      "CommandWindowWheel": "Rueda del ratón",
+      "CommandAllKey": "Tecla",
+      "CommandAll1": "Clic izquierdo",
+      "CommandAll2": "Clic central",
+      "CommandAll3": "Clic derecho",
+      "CommandAllWheel": "Rueda del ratón"
+    },
+    "choices": {
+      "click": "Clic para dar el foco", "follows": "El foco sigue al ratón", "under": "Foco bajo el ratón", "strictly": "Foco estrictamente bajo el ratón",
+      "stealNone": "Ninguna", "low": "Baja", "medium": "Media", "high": "Alta", "extreme": "Extrema",
+      "smart": "Inteligente", "maximizing": "Maximizada", "random": "Aleatoria", "centered": "Centrada", "zeroCorner": "En la esquina superior izquierda", "underMouse": "Bajo el ratón",
+      "switchDesktop": "Cambiar a su escritorio", "bringHere": "Traerla al escritorio actual",
+      "maximize": "Maximizar", "maximizeV": "Maximizar verticalmente", "maximizeH": "Maximizar horizontalmente", "minimize": "Minimizar", "lower": "Bajar", "close": "Cerrar", "onAllDesktops": "En todos los escritorios", "nothing": "Nada",
+      "raise": "Elevar", "toggle": "Elevar o bajar", "menu": "Menú de la ventana",
+      "activateRaise": "Activar y elevar", "activateLower": "Activar y bajar", "activate": "Activar",
+      "wheelRaiseLower": "Elevar o bajar", "wheelMaximize": "Maximizar o restaurar", "wheelAbove": "Mantener encima o debajo", "wheelDesktop": "Escritorio anterior o siguiente", "wheelOpacity": "Cambiar la opacidad",
+      "passRaiseRelease": "Activar, pasar el clic y elevar al soltar", "activateRaisePass": "Activar, elevar y pasar el clic", "activatePass": "Activar y pasar el clic",
+      "scroll": "Desplazar", "activateScroll": "Activar y desplazar", "activateRaiseScroll": "Activar, elevar y desplazar",
+      "meta": "Meta", "alt": "Alt",
+      "move": "Mover", "activateRaiseMove": "Activar, elevar y mover", "resize": "Cambiar de tamaño", "decOpacity": "Reducir la opacidad", "incOpacity": "Aumentar la opacidad"
+    },
+    "errors": { "read": "No se pudieron leer las opciones.", "apply": "No se pudo hacer el cambio." }
+  },
+  "rules": {
+    "add": "Añadir regla",
+    "edit": "Editar regla",
+    "remove": "Eliminar regla",
+    "removeTitle": "¿Eliminar {name}?",
+    "removeQuestion": "La regla se borra y no se puede recuperar.",
+    "none": "Todavía no hay reglas.",
+    "newName": "Regla nueva",
+    "save": "Guardar",
+    "description": "Descripción",
+    "windowClass": "Clase de la ventana (aplicación)",
+    "wholeClass": "Comparar la clase de ventana completa",
+    "windowTitle": "Título de la ventana",
+    "anyWindow": "Cualquier ventana",
+    "properties": "Qué hacer",
+    "action": "Acción",
+    "width": "Ancho",
+    "height": "Alto",
+    "match": { "any": "Cualquiera", "exact": "Exactamente", "contains": "Contiene", "regex": "Expresión regular" },
+    "actions": { "dontAffect": "No afectar", "force": "Forzar", "applyInitially": "Aplicar al principio", "remember": "Recordar", "applyNow": "Aplicar ahora", "forceTemporarily": "Forzar temporalmente" },
+    "props": {
+      "position": "Posición", "size": "Tamaño", "maximizehoriz": "Maximizada horizontalmente", "maximizevert": "Maximizada verticalmente", "minimize": "Minimizada", "fullscreen": "Pantalla completa",
+      "above": "Mantener encima", "below": "Mantener debajo", "noborder": "Sin barra de título ni marco", "skiptaskbar": "Omitir en la barra de tareas", "skippager": "Omitir en el paginador", "skipswitcher": "Omitir en el selector",
+      "screen": "Pantalla", "opacityactive": "Opacidad, activa (%)", "opacityinactive": "Opacidad, inactiva (%)"
+    },
+    "errors": { "read": "No se pudieron leer las reglas.", "apply": "No se pudo hacer el cambio." }
+  },
+  "desktops": {
+    "add": "Añadir escritorio",
+    "rows": "Filas",
+    "wrap": "Navegación cíclica",
+    "name": "Escritorio {n}",
+    "rename": "Cambiar nombre",
+    "remove": "Eliminar",
+    "errors": {
+      "read": "No se pudieron leer los escritorios. ¿Está KWin en marcha?",
+      "apply": "No se pudo hacer el cambio."
+    }
+  },
   "looks": {
     "apply": "Aplicar",
     "active": "En uso",
     "status": "{n} disponibles",
     "none": "No se ha encontrado nada",
-    "inUse": "En uso: {name}",
+    "splashNone": "Ninguna (sin pantalla de arranque)",
+    "scheme": {
+      "windowTitle": "Título de la ventana",
+      "windowText": "Texto de ventana",
+      "button": "Botón",
+      "normal": "Texto normal",
+      "highlighted": "Texto resaltado",
+      "disabled": "Texto desactivado",
+      "link": "enlace",
+      "visited": "visitado"
+    },    "inUse": "En uso: {name}",
+    "theme": {
+      "title": "¿Aplicar {name}?",
+      "intro": "Se aplicará lo siguiente por este tema global:",
+      "appearance": "Preferencias del aspecto visual",
+      "layout": "Diseño del escritorio y de las ventanas",
+      "layoutHint": "Los paneles y los widgets del escritorio se sustituyen por los del tema."
+    },
     "errors": {
       "read": "No se pudo leer la lista.",
-      "apply": "No se pudo aplicar. ¿Está Plasma en marcha?"
+      "apply": "No se pudo aplicar."
     }
   },
   "login": {
-    "numlock": "Bloq Num activado al iniciar sesión",
     "notInstalled": "Plasma Login Manager no está instalado en este equipo.",
     "note": "La imagen se copia para la pantalla de inicio de sesión, así que se sigue viendo aunque muevas el original. Pide la contraseña de administrador.",
     "errors": {
@@ -60,6 +194,25 @@
       "right": "Derecha"
     },
     "height": "Altura",
+    "alignment": { "title": "Alineación", "left": "Inicio", "center": "Centro", "right": "Final" },
+    "width": { "title": "Anchura", "fill": "Rellenar la anchura", "fit": "Ajustar al contenido", "custom": "Personalizada" },
+    "minimumLength": "Longitud mínima",
+    "maximumLength": "Longitud máxima",
+    "offset": "Desplazamiento",
+    "opacity": { "title": "Opacidad", "adaptive": "Adaptable", "opaque": "Opaco", "translucent": "Translúcido" },
+    "template": { "default": "Panel por omisión", "empty": "Panel vacío", "appmenu": "Barra de menú de la aplicación" },
+    "previewHint": "Pulsa un borde de la pantalla para mover el panel allí. El dibujo es aproximado.",
+    "styles": { "title": "Estilos", "classic": "Panel clásico", "dock": "Dock", "sidebar": "Barra lateral" },
+    "group": { "elements": "Elementos del panel", "size": "Posición y tamaño", "length": "Largo y alineación", "more": "Aspecto y comportamiento" },
+    "elements": {
+      "add": "Añadir elemento",
+      "empty": "Este panel aún no tiene elementos. Añade los que quieras: el menú de aplicaciones, la lista de tareas, el reloj...",
+      "remove": "Quitar del panel",
+      "hint": "Un elemento nuevo se pone al final del panel, detrás de los que ya hay. Para cambiar el orden, quita los que deban ir después y vuelve a añadirlos.",
+      "addTitle": "Añadir un elemento al panel",
+      "search": "Buscar",
+      "none": "No se ha encontrado ningún elemento"
+    },
     "floating": "Panel flotante",
     "hiding": {
       "title": "Ocultar el panel",
@@ -80,7 +233,10 @@
       "read": "No se pudieron leer los paneles. ¿Está Plasma en marcha?",
       "apply": "No se pudo cambiar el panel.",
       "add": "No se pudo añadir el panel.",
-      "remove": "No se pudo eliminar el panel."
+      "remove": "No se pudo eliminar el panel.",
+      "widgets": "No se pudieron leer los elementos del panel.",
+      "addWidget": "No se pudo añadir el elemento.",
+      "removeWidget": "No se pudo quitar el elemento."
     }
   }
 }

@@ -17,26 +17,60 @@
   import Gtk from "./views/Gtk.svelte";
   import Panel from "./views/Panel.svelte";
   import Splash from "./views/Splash.svelte";
-  import { Palette, Image, Shapes, MousePointer2, Paintbrush, PanelTop, Sparkles, LogIn } from "lucide-svelte";
+  import Colors from "./views/Colors.svelte";
+  import AppStyle from "./views/AppStyle.svelte";
+  import PlasmaStyle from "./views/PlasmaStyle.svelte";
+  import Decorations from "./views/Decorations.svelte";
+  import Sounds from "./views/Sounds.svelte";
+  import Desktops from "./views/Desktops.svelte";
+  import Behavior from "./views/Behavior.svelte";
+  import Rules from "./views/Rules.svelte";
+  import Effects from "./views/Effects.svelte";
+  import Scripts from "./views/Scripts.svelte";
+  import Tabbox from "./views/Tabbox.svelte";
+  import { Palette, Image, Shapes, MousePointer2, Paintbrush, PanelTop, Sparkles, LogIn, Pipette, Layers, AppWindow, Frame, Volume2, LayoutGrid, WandSparkles, FileCode2, Repeat, MousePointerClick, ListChecks } from "lucide-svelte";
 
+  // The menu is in four groups, as the pages of Plasma are.
   $: tabs = [
-    { id: "themes", icon: Palette, label: $_("app.tabs.themes.label"), title: $_("app.tabs.themes.title") },
-    { id: "wallpapers", icon: Image, label: $_("app.tabs.wallpapers.label"), title: $_("app.tabs.wallpapers.title") },
-    { id: "icons", icon: Shapes, label: $_("app.tabs.icons.label"), title: $_("app.tabs.icons.title") },
-    { id: "cursors", icon: MousePointer2, label: $_("app.tabs.cursors.label"), title: $_("app.tabs.cursors.title") },
-    { id: "gtk", icon: Paintbrush, label: $_("app.tabs.gtk.label"), title: $_("app.tabs.gtk.title") },
-    { id: "panel", icon: PanelTop, label: $_("app.tabs.panel.label"), title: $_("app.tabs.panel.title") },
-    { id: "splash", icon: Sparkles, label: $_("app.tabs.splash.label"), title: $_("app.tabs.splash.title") },
-    { id: "login", icon: LogIn, label: $_("app.tabs.login.label"), title: $_("app.tabs.login.title") },
+    { id: "themes", group: "look", icon: Palette, label: $_("app.tabs.themes.label"), title: $_("app.tabs.themes.title") },
+    { id: "colors", group: "look", icon: Pipette, label: $_("app.tabs.colors.label"), title: $_("app.tabs.colors.title") },
+    { id: "appstyle", group: "look", icon: AppWindow, label: $_("app.tabs.appstyle.label"), title: $_("app.tabs.appstyle.title") },
+    { id: "plasmastyle", group: "look", icon: Layers, label: $_("app.tabs.plasmastyle.label"), title: $_("app.tabs.plasmastyle.title") },
+    { id: "decorations", group: "look", icon: Frame, label: $_("app.tabs.decorations.label"), title: $_("app.tabs.decorations.title") },
+    { id: "icons", group: "look", icon: Shapes, label: $_("app.tabs.icons.label"), title: $_("app.tabs.icons.title") },
+    { id: "cursors", group: "look", icon: MousePointer2, label: $_("app.tabs.cursors.label"), title: $_("app.tabs.cursors.title") },
+    { id: "gtk", group: "look", icon: Paintbrush, label: $_("app.tabs.gtk.label"), title: $_("app.tabs.gtk.title") },
+    { id: "sounds", group: "look", icon: Volume2, label: $_("app.tabs.sounds.label"), title: $_("app.tabs.sounds.title") },
+    { id: "wallpapers", group: "desktop", icon: Image, label: $_("app.tabs.wallpapers.label"), title: $_("app.tabs.wallpapers.title") },
+    { id: "panel", group: "desktop", icon: PanelTop, label: $_("app.tabs.panel.label"), title: $_("app.tabs.panel.title") },
+    { id: "desktops", group: "windows", icon: LayoutGrid, label: $_("app.tabs.desktops.label"), title: $_("app.tabs.desktops.title") },
+    { id: "behavior", group: "windows", icon: MousePointerClick, label: $_("app.tabs.behavior.label"), title: $_("app.tabs.behavior.title") },
+    { id: "rules", group: "windows", icon: ListChecks, label: $_("app.tabs.rules.label"), title: $_("app.tabs.rules.title") },
+    { id: "effects", group: "windows", icon: WandSparkles, label: $_("app.tabs.effects.label"), title: $_("app.tabs.effects.title") },
+    { id: "scripts", group: "windows", icon: FileCode2, label: $_("app.tabs.scripts.label"), title: $_("app.tabs.scripts.title") },
+    { id: "tabbox", group: "windows", icon: Repeat, label: $_("app.tabs.tabbox.label"), title: $_("app.tabs.tabbox.title") },
+    { id: "splash", group: "startup", icon: Sparkles, label: $_("app.tabs.splash.label"), title: $_("app.tabs.splash.title") },
+    { id: "login", group: "startup", icon: LogIn, label: $_("app.tabs.login.label"), title: $_("app.tabs.login.title") },
   ];
 
   const views: Record<string, ComponentType> = {
     themes: Themes,
+    colors: Colors,
+    appstyle: AppStyle,
+    plasmastyle: PlasmaStyle,
+    decorations: Decorations,
     wallpapers: Wallpapers,
     icons: Icons,
     cursors: Cursors,
     gtk: Gtk,
+    sounds: Sounds,
     panel: Panel,
+    desktops: Desktops,
+    behavior: Behavior,
+    rules: Rules,
+    effects: Effects,
+    scripts: Scripts,
+    tabbox: Tabbox,
     splash: Splash,
     login: Login,
   };
@@ -141,8 +175,11 @@
     {#if frameless}
       <div class="h-7 shrink-0" data-tauri-drag-region></div>
     {/if}
-    <div id="main-scroll" class="content-scroll flex-1 overflow-y-auto p-7 {frameless ? 'pt-0' : ''}">
+    <!-- The banner of the page stays where it is while the page scrolls under it. -->
+    <div class="shrink-0 px-7 {frameless ? '' : 'pt-7'}">
       <PageHero title={activeTab.title} icon={activeTab.icon} />
+    </div>
+    <div id="main-scroll" class="content-scroll flex-1 overflow-y-auto px-7 pb-7">
       <svelte:component this={ActiveView} />
     </div>
 

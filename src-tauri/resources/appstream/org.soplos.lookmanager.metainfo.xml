@@ -43,14 +43,30 @@
       <li xml:lang="it">Aggiunge, modifica e rimuove pannelli</li>
       <li xml:lang="ro">Adaugă, modifică și elimină panouri</li>
       <li xml:lang="ru">Добавляет, изменяет и удаляет панели</li>
-      <li>Changes the picture and the NumLock key of the login screen of Plasma Login Manager</li>
-      <li xml:lang="es">Cambia la imagen y la tecla Bloq Num de la pantalla de inicio de sesión de Plasma Login Manager</li>
-      <li xml:lang="fr">Change l'image et la touche Verr. Num de l'écran de connexion de Plasma Login Manager</li>
-      <li xml:lang="de">Ändert das Bild und die Num-Taste des Anmeldebildschirms von Plasma Login Manager</li>
-      <li xml:lang="pt">Altera a imagem e a tecla Num Lock do ecrã de início de sessão do Plasma Login Manager</li>
-      <li xml:lang="it">Cambia l'immagine e il tasto Bloc Num della schermata di accesso di Plasma Login Manager</li>
-      <li xml:lang="ro">Schimbă imaginea și tasta Num Lock a ecranului de autentificare Plasma Login Manager</li>
-      <li xml:lang="ru">Меняет изображение и клавишу Num Lock экрана входа Plasma Login Manager</li>
+      <li>Changes the picture of the login screen of Plasma Login Manager</li>
+      <li xml:lang="es">Cambia la imagen de la pantalla de inicio de sesión de Plasma Login Manager</li>
+      <li xml:lang="fr">Change l'image de l'écran de connexion de Plasma Login Manager</li>
+      <li xml:lang="de">Ändert das Bild des Anmeldebildschirms von Plasma Login Manager</li>
+      <li xml:lang="pt">Altera a imagem do ecrã de início de sessão do Plasma Login Manager</li>
+      <li xml:lang="it">Cambia l'immagine della schermata di accesso di Plasma Login Manager</li>
+      <li xml:lang="ro">Schimbă imaginea ecranului de autentificare Plasma Login Manager</li>
+      <li xml:lang="ru">Меняет изображение экрана входа Plasma Login Manager</li>
+      <li>Manages virtual desktops, window behavior and rules, desktop effects, KWin scripts and the task switcher</li>
+      <li xml:lang="es">Gestiona escritorios virtuales, comportamiento y reglas de las ventanas, efectos del escritorio, guiones de KWin y el selector de tareas</li>
+      <li xml:lang="fr">Gère les bureaux virtuels, le comportement et les règles des fenêtres, les effets de bureau, les scripts KWin et le sélecteur de tâches</li>
+      <li xml:lang="de">Verwaltet virtuelle Arbeitsflächen, Fensterverhalten und Fensterregeln, Desktop-Effekte, KWin-Skripte und den Aufgabenumschalter</li>
+      <li xml:lang="pt">Gere áreas de trabalho virtuais, comportamento e regras das janelas, efeitos do ambiente de trabalho, scripts do KWin e o seletor de tarefas</li>
+      <li xml:lang="it">Gestisce desktop virtuali, comportamento e regole delle finestre, effetti del desktop, script di KWin e il selettore delle attività</li>
+      <li xml:lang="ro">Gestionează desktopuri virtuale, comportamentul și regulile ferestrelor, efecte de desktop, scripturi KWin și selectorul de activități</li>
+      <li xml:lang="ru">Управляет виртуальными рабочими столами, поведением и правилами окон, эффектами, скриптами KWin и переключателем задач</li>
+      <li>Installs from the store of KDE or from a file, and removes what is installed</li>
+      <li xml:lang="es">Instala desde la tienda de KDE o desde un archivo, y elimina lo instalado</li>
+      <li xml:lang="fr">Installe depuis la boutique de KDE ou depuis un fichier, et supprime ce qui est installé</li>
+      <li xml:lang="de">Installiert aus dem KDE-Store oder aus einer Datei und entfernt Installiertes</li>
+      <li xml:lang="pt">Instala a partir da loja do KDE ou de um ficheiro, e remove o que está instalado</li>
+      <li xml:lang="it">Installa dallo store di KDE o da un file, e rimuove ciò che è installato</li>
+      <li xml:lang="ro">Instalează din magazinul KDE sau dintr-un fișier și elimină ce este instalat</li>
+      <li xml:lang="ru">Устанавливает из магазина KDE или из файла и удаляет установленное</li>
     </ul>
   </description>
 
@@ -70,6 +86,16 @@
   </provides>
 
   <releases>
+    <release version="3.0.0-beta" date="2026-11-12">
+      <description>
+        <p>First beta. The Windows group is complete: virtual desktops, window behavior, window rules, desktop effects, KWin scripts and the task switcher. What the pages list can be installed from the store of KDE or from a file, and removed, and the sections of the sidebar fold.</p>
+      </description>
+    </release>
+    <release version="3.0.0-1-alpha" date="2026-11-11">
+      <description>
+        <p>Every wallpaper has its own card with its picture, kept in a small copy so the list scrolls smoothly, and the icon, cursor and GTK themes show what they look like. Applying a global theme asks what to apply, as System Settings does: the appearance, and the layout of the desktop and the panels. The cursor themes that cannot be applied and the GTK themes with no appearance are not offered. The panels have the options of Plasma (alignment, width, offset, opacity) and a dock style, and a new panel can be an empty one. The pages of the Global theme of System Settings that were missing are there: colors, application style, Plasma style, window decorations and sounds. New pages for virtual desktops, desktop effects, KWin scripts and the task switcher, the sections of the sidebar fold, and what is listed can be installed from the store of KDE or from a file, and removed.</p>
+      </description>
+    </release>
     <release version="3.0.0-alpha" date="2026-11-08">
       <description>
         <p>First version. Global themes, wallpapers, icon themes, cursor themes, GTK themes, panels, start-up screen and the login screen of Plasma Login Manager. Not yet tested on a Plasma desktop.</p>

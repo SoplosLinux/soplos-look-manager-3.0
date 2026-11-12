@@ -1,11 +1,12 @@
 {
   "name": "soplos-look-manager-3",
   "private": true,
-  "version": "3.0.0-alpha",
+  "version": "3.0.0-beta",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:helper": "bash style-preview/fetch-kdecorations.sh && cmake -S style-preview -B style-preview/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$PWD/style-preview/build/deps/usr && cmake --build style-preview/build && mkdir -p src-tauri/resources/lib && cp style-preview/build/soplos-look-manager-style-preview src-tauri/resources/lib/",
     "preview": "vite preview",
     "tauri": "tauri"
   },

@@ -1,5 +1,4 @@
-// The login screen of Plasma Login Manager: the picture behind the greeter and
-// the NumLock key. The greeter runs as the `plasmalogin` user before any
+// The login screen of Plasma Login Manager: the picture behind the greeter. The greeter runs as the `plasmalogin` user before any
 // session exists, so what it reads lives in /etc and /var/lib/plasmalogin and
 // only the administrator can write it.
 //
@@ -18,7 +17,6 @@ use std::process::Command;
 const CONF: &str = "/etc/plasmalogin.conf";
 const GREETER_HOME: &str = "/var/lib/plasmalogin";
 const WALLPAPERS: &str = "/var/lib/plasmalogin/wallpapers";
-const KCMINPUT: &str = "/var/lib/plasmalogin/.config/kcminputrc";
 /// The group of the greeter's wallpaper, as the module of System Settings writes it.
 const GREETER_GROUP: &str = "[Greeter][Wallpaper][org.kde.image][General]";
 const BIGGEST_PICTURE: u64 = 40_000_000;
@@ -28,8 +26,6 @@ const BIGGEST_PICTURE: u64 = 40_000_000;
 pub struct LoginState {
     /// The picture the greeter shows now, as the path of its file.
     pub image: Option<String>,
-    /// Whether the greeter turns NumLock on.
-    pub numlock: bool,
     /// Whether Plasma Login Manager is on this computer.
     pub installed: bool,
 }
@@ -37,8 +33,10 @@ pub struct LoginState {
 #[derive(Serialize, Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
 enum Op {
-    /// Sets the picture of the greeter and whether NumLock is on at login.
-    WriteLogin { image: Option<String>, numlock: Option<bool> },
+    /// Sets the picture of the greeter.
+    WriteLogin { image: Option<String> },
+    /// Removes an icon or cursor theme that the system brings, from `/usr/share/icons`.
+    RemoveSystemIcons { id: String },
 }
 
 #[derive(Serialize, Deserialize)]
@@ -117,11 +115,8 @@ pub(crate) fn ini_set(text: &str, header: &str, key: &str, value: &str) -> Strin
 pub fn get_login() -> LoginState {
     let conf = fs::read_to_string(CONF).unwrap_or_default();
     let image = ini_get(&conf, GREETER_GROUP, "Image").map(|v| v.strip_prefix("file://").unwrap_or(&v).to_string());
-    let input = fs::read_to_string(KCMINPUT).unwrap_or_default();
-    // In the settings of KDE, NumLock=0 is on, 1 is off and 2 leaves it as it is.
-    let numlock = ini_get(&input, "[Keyboard]", "NumLock").as_deref() == Some("0");
     let installed = Path::new(CONF).exists() || Path::new(GREETER_HOME).is_dir() || Path::new("/usr/bin/plasmalogin").exists();
-    LoginState { image, numlock, installed }
+    LoginState { image, installed }
 }
 
 fn cache_dir(home: &Path) -> PathBuf {
@@ -130,13 +125,22 @@ fn cache_dir(home: &Path) -> PathBuf {
 
 /// Asks pkexec to write the login screen as root. One call is one password.
 #[tauri::command(async)]
-pub fn apply_login(image: Option<String>, numlock: Option<bool>) -> Result<(), String> {
+pub fn apply_login(image: Option<String>) -> Result<(), String> {
+    ask_root(vec![Op::WriteLogin { image }])
+}
+
+/// Removes an icon or cursor theme of the system, as the administrator.
+pub(crate) fn remove_system_icons(id: &str) -> Result<(), String> {
+    ask_root(vec![Op::RemoveSystemIcons { id: id.to_string() }])
+}
+
+fn ask_root(ops: Vec<Op>) -> Result<(), String> {
     let home = PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?);
     let dir = cache_dir(&home);
     fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
     let file = dir.join(format!("request-{}.json", std::process::id()));
 
-    let request = serde_json::to_string(&Request { ops: vec![Op::WriteLogin { image, numlock }] }).map_err(|e| e.to_string())?;
+    let request = serde_json::to_string(&Request { ops }).map_err(|e| e.to_string())?;
     {
         use std::io::Write;
         let mut out = fs::OpenOptions::new().write(true).create(true).truncate(true).mode(0o600).open(&file).map_err(|e| e.to_string())?;
@@ -197,24 +201,23 @@ fn set_picture(image: &str, uid: u32) -> Result<(), String> {
     fs::write(CONF, ini_set(&conf, GREETER_GROUP, "Image", &format!("file://{}", dest.display()))).map_err(|e| e.to_string())
 }
 
-fn set_numlock(on: bool) -> Result<(), String> {
-    let dir = Path::new(KCMINPUT).parent().ok_or("No folder")?;
-    fs::create_dir_all(dir).map_err(|e| e.to_string())?;
-    give_to_greeter(dir);
-    let text = fs::read_to_string(KCMINPUT).unwrap_or_default();
-    fs::write(KCMINPUT, ini_set(&text, "[Keyboard]", "NumLock", if on { "0" } else { "1" })).map_err(|e| e.to_string())?;
-    give_to_greeter(Path::new(KCMINPUT));
-    Ok(())
+/// Removes `/usr/share/icons/<id>`: a plain name, never the fallback theme, and a link
+/// is removed without touching what it points to.
+fn remove_icons(id: &str) -> Result<(), String> {
+    if id.is_empty() || id == "." || id == ".." || id == "hicolor" || id.contains('/') || id.contains('\0') {
+        return Err("It is not a theme that can be removed".to_string());
+    }
+    let path = Path::new("/usr/share/icons").join(id);
+    let meta = path.symlink_metadata().map_err(|e| e.to_string())?;
+    if meta.is_dir() { fs::remove_dir_all(&path) } else { fs::remove_file(&path) }.map_err(|e| e.to_string())
 }
 
 fn run_op(op: &Op, uid: u32) -> Result<(), String> {
     match op {
-        Op::WriteLogin { image, numlock } => {
+        Op::RemoveSystemIcons { id } => remove_icons(id),
+        Op::WriteLogin { image } => {
             if let Some(image) = image {
                 set_picture(image, uid)?;
-            }
-            if let Some(on) = numlock {
-                set_numlock(*on)?;
             }
             Ok(())
         }
