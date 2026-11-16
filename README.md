@@ -2,7 +2,16 @@
 
 The theme and layout manager of Soplos Linux Tyson (Plasma). A new program built on Tauri 2, Svelte 4 and Tailwind 3, in the style of the other Soplos 3.0 programs.
 
-> `3.0.0-beta`: written for Plasma 6 and tried on a Plasma desktop. The Behavior and Rules pages and the removing of system icon themes have had less use than the rest. Report anything that fails.
+> `3.0.0`: first stable release, written for Plasma 6.
+
+| ![Global themes](src-tauri/resources/screenshots/screenshot01.png) Global themes | ![Color schemes](src-tauri/resources/screenshots/screenshot02.png) Color schemes |
+|:---:|:---:|
+| ![Application style](src-tauri/resources/screenshots/screenshot03.png) Application style | ![Plasma style](src-tauri/resources/screenshots/screenshot04.png) Plasma style |
+| ![Window decorations](src-tauri/resources/screenshots/screenshot05.png) Window decorations | ![Icon themes](src-tauri/resources/screenshots/screenshot06.png) Icon themes |
+| ![Cursor themes](src-tauri/resources/screenshots/screenshot07.png) Cursor themes | ![GTK themes](src-tauri/resources/screenshots/screenshot08.png) GTK themes |
+| ![System sounds](src-tauri/resources/screenshots/screenshot09.png) System sounds | ![Wallpapers](src-tauri/resources/screenshots/screenshot10.png) Wallpapers |
+| ![Panel layout](src-tauri/resources/screenshots/screenshot11.png) Panel layout | ![Panel options](src-tauri/resources/screenshots/screenshot12.png) Panel options |
+| ![Window behavior](src-tauri/resources/screenshots/screenshot13.png) Window behavior | |
 
 ## Pages
 

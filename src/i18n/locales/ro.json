@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Minimizează", "maximize": "Maximizează", "restore": "Restaurează", "close": "Închide" },
     "groups": { "look": "Aspect", "desktop": "Desktop", "windows": "Ferestre", "startup": "Pornire" },
     "tabs": {
       "themes": { "label": "Teme", "title": "Teme globale" },

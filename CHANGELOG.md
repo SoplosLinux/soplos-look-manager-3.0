@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [3.0.0] - 2026-11-16
+
+First stable release: the program is no longer in beta. The pages of `3.0.0-beta` were tried on a Plasma desktop, the Behavior and Rules pages included.
+
+### Added
+
+- Manual page (`soplos-look-manager.1`), installed by the package.
+- Thirteen screenshots of the program, in English, in `src-tauri/resources/screenshots/`, in the README and in the metainfo, with their captions in the eight languages. The package installs them, so the software centers can show them.
+
+### Fixed
+
+- The buttons of the window (minimize, maximize and close) showed the names of their texts, such as `app.window.minimize`, in their tooltips: the texts were missing in the eight languages.
+
 ## [3.0.0-beta] - 2026-11-12
 
 First beta: the pages of `3.0.0-1-alpha` were tried on a Plasma desktop. The last two pages of the Windows group, Behavior and Rules, are new in this version and have not had that use yet. Everything done so far is listed under `3.0.0-1-alpha` below.

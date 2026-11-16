@@ -1,6 +1,6 @@
 [package]
 name = "soplos-look-manager"
-version = "3.0.0-beta"
+version = "3.0.0"
 description = "Soplos Look Manager"
 authors = ["Sergi Perich <info@soploslinux.com>"]
 license = "GPL-3.0-or-later"

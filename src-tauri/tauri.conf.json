@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "soplos-look-manager",
-  "version": "3.0.0-beta",
+  "version": "3.0.0",
   "identifier": "org.soplos.lookmanager",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -85,7 +85,21 @@
           "/usr/lib/soplos-look-manager/soplos-look-manager-style-preview": "resources/lib/soplos-look-manager-style-preview",
           "/usr/share/polkit-1/actions/org.soplos.lookmanager.policy": "resources/polkit/org.soplos.lookmanager.policy",
           "/usr/share/metainfo/org.soplos.lookmanager.metainfo.xml": "resources/appstream/org.soplos.lookmanager.metainfo.xml",
-          "/usr/share/doc/soplos-look-manager/copyright": "resources/debian/copyright"
+          "/usr/share/doc/soplos-look-manager/copyright": "resources/debian/copyright",
+          "/usr/share/man/man1/soplos-look-manager.1.gz": "resources/docs/soplos-look-manager.1.gz",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot01.png": "resources/screenshots/screenshot01.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot02.png": "resources/screenshots/screenshot02.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot03.png": "resources/screenshots/screenshot03.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot04.png": "resources/screenshots/screenshot04.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot05.png": "resources/screenshots/screenshot05.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot06.png": "resources/screenshots/screenshot06.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot07.png": "resources/screenshots/screenshot07.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot08.png": "resources/screenshots/screenshot08.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot09.png": "resources/screenshots/screenshot09.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot10.png": "resources/screenshots/screenshot10.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot11.png": "resources/screenshots/screenshot11.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot12.png": "resources/screenshots/screenshot12.png",
+          "/usr/share/doc/soplos-look-manager/screenshots/screenshot13.png": "resources/screenshots/screenshot13.png"
         }
       }
     }

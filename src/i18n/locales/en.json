@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Minimize", "maximize": "Maximize", "restore": "Restore", "close": "Close" },
     "groups": { "look": "Look", "desktop": "Desktop", "windows": "Windows", "startup": "Start-up" },
     "tabs": {
       "themes": { "label": "Themes", "title": "Global themes" },

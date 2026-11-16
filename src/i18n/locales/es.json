@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Minimizar", "maximize": "Maximizar", "restore": "Restaurar", "close": "Cerrar" },
     "groups": { "look": "Aspecto", "desktop": "Escritorio", "windows": "Ventanas", "startup": "Inicio" },
     "tabs": {
       "themes": { "label": "Temas", "title": "Temas globales" },

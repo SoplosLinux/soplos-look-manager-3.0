@@ -1,0 +1,94 @@
+.TH "SOPLOS-LOOK-MANAGER" "1" "2026-11-16" "Soplos Linux" "User Commands"
+.SH NAME
+soplos-look-manager \- theme and layout manager for Soplos Linux Tyson (Plasma)
+.SH SYNOPSIS
+.B soplos-look-manager
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.B soplos-look-manager
+changes how Soplos Linux Tyson looks and behaves from a graphical interface.
+Built with Tauri 2, Rust and Svelte, its pages are in four groups:
+.IP \[bu] 2
+.B Look:
+global themes of Plasma, with a preview, applied with the choice of what to
+apply (the appearance, and the layout of the desktop and the panels); color
+schemes; the style of the applications and of Plasma; window decorations
+(KWin plugins and Aurorae themes); sounds; icon, cursor and GTK themes.
+.IP \[bu]
+.B Desktop:
+wallpapers of the system and of the user, and the panels: adding and removing
+them, their position, height, style (classic, dock and side bar), alignment,
+width, offset, opacity and hiding, and the elements on them.
+.IP \[bu]
+.B Windows:
+virtual desktops, window behavior (focus, placement, snapping and mouse
+actions), window rules, desktop effects, KWin scripts and the task switcher.
+.IP \[bu]
+.B Start-up:
+start-up screens and the picture of the login screen of Plasma Login Manager.
+.P
+What the pages list can be installed from the store of KDE or from a file,
+and removed.
+.P
+The window never runs as root. The change of the login screen goes through a
+single Polkit-gated helper, authenticated with
+.BR pkexec (1),
+which accepts only a closed list of operations and checks every value before
+it writes.
+.P
+The interface is available in English, Spanish, German, French, Italian,
+Portuguese, Romanian and Russian. It starts in the system language and falls
+back to English. The light or dark theme of the window follows the one of
+Plasma.
+.SH OPTIONS
+.TP
+.B \-\-run-ops \fIFILE\fR
+Internal Polkit-authenticated task: validate and run the operations stored in
+.IR FILE .
+Used by the application itself through
+.BR pkexec (1)
+and not meant to be called by hand.
+.SH KEYBOARD SHORTCUTS
+.TP
+.B F1
+About dialog.
+.TP
+.B Ctrl+1 \fRto\fB Ctrl+9
+The first nine pages.
+.TP
+.B Ctrl+Tab
+Next page.
+.TP
+.B Ctrl+Shift+Tab
+Previous page.
+.TP
+.B Ctrl+Q
+Quit the application.
+.SH FILES
+.TP
+.I ~/.cache/soplos-look-manager/
+Small copies of the wallpapers and the pictures of the icon and cursor themes,
+made once so the pages show quickly.
+.TP
+.I /etc/plasmalogin.conf
+The settings of the login screen of Plasma Login Manager.
+.TP
+.I /usr/lib/soplos-look-manager/soplos-look-manager-style-preview
+Helper that draws the preview of the application styles and window decorations.
+.TP
+.I /usr/share/polkit-1/actions/org.soplos.lookmanager.policy
+Polkit policy defining the administrator privileges for the login screen.
+.SH AUTHOR
+Written by Sergi Perich <info@soploslinux.com> for the Soplos Linux project.
+.SH COPYRIGHT
+Copyright \(co 2026 Sergi Perich <info@soploslinux.com>.
+.br
+License: GPL-3.0-or-later <https://www.gnu.org/licenses/gpl-3.0.html>.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+.BR plasmashell (1),
+.BR kwin_wayland (1),
+.BR pkexec (1),
+.BR soplos-theme-manager (1)

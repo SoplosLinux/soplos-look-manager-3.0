@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Minimizar", "maximize": "Maximizar", "restore": "Restaurar", "close": "Fechar" },
     "groups": { "look": "Aspeto", "desktop": "Ambiente de trabalho", "windows": "Janelas", "startup": "Arranque" },
     "tabs": {
       "themes": { "label": "Temas", "title": "Temas globais" },

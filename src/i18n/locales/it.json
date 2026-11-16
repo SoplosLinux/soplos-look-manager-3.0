@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Riduci a icona", "maximize": "Ingrandisci", "restore": "Ripristina", "close": "Chiudi" },
     "groups": { "look": "Aspetto", "desktop": "Desktop", "windows": "Finestre", "startup": "Avvio" },
     "tabs": {
       "themes": { "label": "Temi", "title": "Temi globali" },

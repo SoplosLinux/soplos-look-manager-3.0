@@ -1,5 +1,6 @@
 {
   "app": {
+    "window": { "minimize": "Свернуть", "maximize": "Развернуть", "restore": "Восстановить", "close": "Закрыть" },
     "groups": { "look": "Внешний вид", "desktop": "Рабочий стол", "windows": "Окна", "startup": "Запуск" },
     "tabs": {
       "themes": { "label": "Темы", "title": "Глобальные темы" },
